@@ -2,39 +2,30 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>For Tanvithaaa 💗</title>
 
 <style>
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
-
-html{scroll-behavior:smooth}
+*{box-sizing:border-box;margin:0;padding:0}
 
 body{
-  font-family:"Trebuchet MS","Comic Sans MS",system-ui,sans-serif;
+  font-family:"Trebuchet MS","Comic Sans MS",sans-serif;
   color:#633f58;
   overflow-x:hidden;
-  background:
-    radial-gradient(circle at 10% 10%,#fff 0 32px,transparent 33px),
-    radial-gradient(circle at 90% 20%,#fff 0 25px,transparent 26px),
-    linear-gradient(135deg,#ffe7f1,#eee5ff,#fff1d8);
+  background:linear-gradient(135deg,#ffe9f2,#eee6ff,#fff3dc);
 }
 
-body::before{
-  content:"🎀   ✨   🌷   🐾   💗   ⭐   ☁️   🎀";
+body:before{
+  content:"🎀 ✨ 🌷 ♡ 🐾 💗 ⭐ ☁️ 🎀 ✨ 🌷";
   position:fixed;
   inset:0;
-  pointer-events:none;
   z-index:0;
-  opacity:.13;
-  font-size:30px;
+  pointer-events:none;
+  opacity:.14;
+  font-size:28px;
   line-height:4;
   word-spacing:35px;
-  animation:bgFloat 18s linear infinite;
+  animation:bgFloat 20s linear infinite;
 }
 
 @keyframes bgFloat{
@@ -45,76 +36,48 @@ body::before{
 .screen{
   display:none;
   min-height:100vh;
-  width:100%;
-  padding:35px 18px;
-  position:relative;
-  z-index:1;
+  padding:30px 15px;
   align-items:center;
   justify-content:center;
+  position:relative;
+  z-index:1;
 }
 
 .screen.active{
   display:flex;
-  animation:screenIn .65s ease;
+  animation:appear .65s ease;
 }
 
-@keyframes screenIn{
-  from{opacity:0;transform:translateY(18px) scale(.98)}
+@keyframes appear{
+  from{opacity:0;transform:translateY(20px) scale(.97)}
   to{opacity:1;transform:none}
 }
 
-.container{
-  width:min(900px,96vw);
-  text-align:center;
-}
+.container{width:min(900px,96vw);text-align:center}
 
 .card{
-  width:min(760px,94vw);
+  width:min(780px,95vw);
   margin:auto;
-  padding:45px 25px;
-  background:#ffffffdf;
+  padding:42px 25px;
+  background:#ffffffea;
   border:4px solid white;
-  border-radius:45px;
-  box-shadow:
-    0 25px 70px rgba(105,55,100,.18),
-    inset 0 0 0 3px #ffd5e5;
+  border-radius:44px;
+  box-shadow:0 25px 70px #71456725,inset 0 0 0 3px #ffd5e5;
   position:relative;
   overflow:hidden;
 }
 
-.card::before{
-  content:"";
-  width:110px;
-  height:110px;
-  border-radius:50%;
-  background:#ffe1ee;
-  position:absolute;
-  top:-55px;
-  left:-35px;
-}
-
-.card::after{
-  content:"";
-  width:100px;
-  height:100px;
-  border-radius:50%;
-  background:#e8ddff;
-  position:absolute;
-  right:-45px;
-  bottom:-45px;
-}
-
 h1{
   color:#ff4d91;
-  font-size:clamp(42px,8vw,78px);
-  text-shadow:4px 5px 0 #ffd7e6;
+  font-size:clamp(42px,8vw,75px);
+  text-shadow:4px 5px #ffd8e7;
   margin:18px 0;
 }
 
 h2{
   color:#ff5797;
-  font-size:clamp(30px,6vw,55px);
-  text-shadow:3px 4px 0 #ffe0ed;
+  font-size:clamp(30px,6vw,52px);
+  text-shadow:3px 4px #ffe0ed;
   margin:15px 0;
 }
 
@@ -123,72 +86,67 @@ p{
   line-height:1.75;
 }
 
-.small{
-  font-size:15px;
-  opacity:.75;
-}
-
 button{
-  border:none;
-  outline:none;
+  border:0;
   cursor:pointer;
-  margin-top:25px;
-  padding:15px 28px;
+  margin-top:24px;
+  padding:15px 29px;
   border-radius:999px;
   background:linear-gradient(135deg,#ff73a8,#ff4d91);
   color:white;
   font-size:17px;
   font-weight:bold;
-  box-shadow:0 8px 0 #d93f79,0 15px 30px rgba(220,65,120,.22);
+  box-shadow:0 8px #d93f79,0 15px 30px #dc417833;
   transition:.2s;
 }
 
-button:hover{
-  transform:translateY(-3px) scale(1.03);
+button:hover{transform:translateY(-3px) scale(1.03)}
+button:active{transform:translateY(3px)}
+
+.doodles{
+  font-size:27px;
+  letter-spacing:10px;
+  animation:float 2s ease-in-out infinite;
 }
 
-button:active{
-  transform:translateY(4px);
-  box-shadow:0 3px 0 #d93f79;
+@keyframes float{
+  50%{transform:translateY(-7px)}
 }
 
 /* INTRO */
 
 .gift{
-  font-size:110px;
-  animation:giftBounce 1.8s infinite;
+  font-size:105px;
+  animation:gift 1.7s infinite;
 }
 
-@keyframes giftBounce{
-  50%{transform:translateY(-15px) rotate(3deg)}
+@keyframes gift{
+  50%{transform:translateY(-14px) rotate(4deg)}
 }
 
-.intro-text{
+.intro-note{
   max-width:620px;
   margin:20px auto;
 }
 
-.open-btn{
+.open{
   font-size:20px;
-  padding:18px 34px;
+  padding:18px 35px;
 }
 
 /* PASSWORD */
 
-.lock{
-  font-size:80px;
-  animation:bounce 1.7s infinite;
+.lock{font-size:78px;animation:lock 1.6s infinite}
+
+@keyframes lock{
+  50%{transform:translateY(-9px) rotate(4deg)}
 }
 
-@keyframes bounce{
-  50%{transform:translateY(-10px)}
-}
-
-.pass-input{
+.pass{
   display:block;
   width:220px;
   margin:25px auto 10px;
-  padding:15px;
+  padding:14px;
   border:3px solid #ffc1d7;
   border-radius:20px;
   text-align:center;
@@ -197,44 +155,22 @@ button:active{
   outline:none;
 }
 
-.pass-input:focus{
-  border-color:#ff6fa5;
-}
-
 .error{
+  min-height:28px;
   color:#e8457b;
   font-weight:bold;
-  min-height:30px;
-  margin-top:10px;
 }
 
 /* QUESTION */
 
-.question{
-  font-size:23px;
-  margin:25px auto;
-}
-
-.danger{
-  background:#ff6a7e;
-  box-shadow:0 8px 0 #c93e53;
-}
+.question{font-size:24px;margin:25px}
+.no{background:#ff667b;box-shadow:0 8px #c63d52}
 
 /* BIRTHDAY */
 
-.birthday-title{
-  animation:birthdayPop 1.2s ease;
-}
-
-@keyframes birthdayPop{
-  0%{transform:scale(.2);opacity:0}
-  70%{transform:scale(1.1)}
-  100%{transform:scale(1);opacity:1}
-}
-
 .crackers{
   font-size:65px;
-  letter-spacing:15px;
+  letter-spacing:12px;
   animation:cracker 1s infinite;
 }
 
@@ -244,65 +180,51 @@ button:active{
 
 /* HYPE */
 
-.hype-line{
-  font-size:25px;
-  margin:18px auto;
-}
-
-.suspense{
-  font-size:19px;
-  margin-top:15px;
-}
+.hype{font-size:23px;margin:20px}
 
 /* COMEDY */
 
-.comedy-img{
-  width:min(430px,90%);
-  margin:25px auto;
-  display:block;
+.comedy{
+  width:min(440px,92%);
   padding:10px;
   background:white;
-  border-radius:35px;
   border:4px solid #ffd0e1;
-  box-shadow:0 18px 45px rgba(100,50,80,.18);
+  border-radius:35px;
+  box-shadow:0 18px 45px #64325025;
   transform:rotate(-2deg);
+  margin:25px auto;
+  display:block;
 }
 
 .fah{
   display:inline-block;
-  margin:12px;
-  padding:12px 24px;
-  border-radius:30px;
+  color:#ff4d91;
   background:white;
-  border:3px solid #ff8eb5;
-  box-shadow:5px 7px 0 #ffc5d9;
+  border:3px solid #ff9cbd;
+  padding:12px 25px;
+  border-radius:30px;
+  box-shadow:5px 7px #ffc5d9;
   animation:fah .35s infinite alternate;
 }
 
-.fah span{
-  color:#ff4d91;
-  font-size:55px;
-  font-weight:bold;
-}
+.fah span{font-size:52px;font-weight:bold}
 
 @keyframes fah{
-  from{transform:rotate(-3deg) scale(1)}
-  to{transform:rotate(3deg) scale(1.04)}
+  to{transform:rotate(3deg) scale(1.05)}
 }
 
-/* SONG */
+/* MUSIC */
 
-.music-card{
-  max-width:580px;
+.music-box{
   margin:25px auto;
-  padding:28px;
+  padding:30px;
+  max-width:580px;
   background:#fff;
-  border-radius:32px;
   border:3px dashed #ff9fc0;
-  box-shadow:0 15px 40px rgba(100,50,80,.12);
+  border-radius:32px;
 }
 
-.music-icon{
+.music-note{
   font-size:70px;
   animation:music 1s infinite;
 }
@@ -311,81 +233,64 @@ button:active{
   50%{transform:translateY(-8px) rotate(5deg)}
 }
 
-#dedicatedSong{
-  display:none;
-}
-
-.song-status{
-  margin-top:15px;
-  color:#ff5797;
-}
+.status{color:#ff5797;margin-top:12px}
 
 /* WARNING */
 
 .warning{
+  display:none;
   position:fixed;
   inset:0;
-  background:rgba(60,30,55,.45);
-  display:none;
+  z-index:1000;
+  background:#3c1e374d;
   align-items:center;
   justify-content:center;
-  z-index:1000;
   padding:20px;
 }
 
-.warning.show{
-  display:flex;
-}
+.warning.show{display:flex}
 
 .warning-box{
-  width:min(430px,94vw);
-  background:white;
+  width:min(440px,95vw);
   padding:35px 25px;
+  background:white;
+  border:4px solid #ffd4e3;
   border-radius:35px;
   text-align:center;
-  border:4px solid #ffd4e3;
-  box-shadow:0 25px 70px rgba(0,0,0,.25);
   animation:pop .35s ease;
+  box-shadow:0 25px 70px #0003;
 }
+
+.warning-emoji{font-size:60px}
 
 @keyframes pop{
   from{transform:scale(.6);opacity:0}
   to{transform:scale(1);opacity:1}
 }
 
-.warning-box .emoji{
-  font-size:60px;
-}
-
 /* MEMORIES */
 
-.memory-card{
-  max-width:650px;
-  margin:auto;
-}
-
-.memory-photo{
-  width:min(600px,92vw);
+.memory-img{
+  width:min(610px,92vw);
   height:min(500px,65vh);
   object-fit:contain;
-  display:block;
-  margin:25px auto;
-  padding:10px;
   background:white;
-  border-radius:35px;
+  padding:11px;
   border:4px solid #ffd3e3;
-  box-shadow:0 20px 50px rgba(90,45,80,.2);
-  user-select:none;
+  border-radius:30px;
+  box-shadow:0 20px 50px #5a2d5025;
+  margin:25px auto;
+  display:block;
+  transition:.3s;
 }
 
-.memory-number{
-  color:#ff5797;
-  font-weight:bold;
+.memory-img.change{
+  animation:photo .45s ease;
 }
 
-.swipe-note{
-  font-size:15px;
-  opacity:.7;
+@keyframes photo{
+  from{opacity:0;transform:translateX(40px) rotate(3deg)}
+  to{opacity:1;transform:none}
 }
 
 .memory-buttons{
@@ -395,55 +300,67 @@ button:active{
   flex-wrap:wrap;
 }
 
-.memory-buttons button{
-  margin-top:10px;
+.number{
+  color:#ff5797;
+  font-weight:bold;
 }
 
-/* MESSAGE */
+/* LETTER */
 
-.message{
-  text-align:left;
-  max-width:700px;
+.letter-wrap{
   margin:25px auto;
-  padding:30px 25px;
-  background:#fffafc;
-  border-radius:30px;
+  max-width:710px;
+}
+
+.envelope{
+  background:#fff7fb;
   border:3px dashed #ffb3ca;
+  border-radius:30px;
+  padding:28px 22px;
+  text-align:left;
+}
+
+.letter{
   line-height:1.8;
 }
 
-.message p{
-  margin-bottom:20px;
-}
+.letter p{margin-bottom:20px}
 
 .signature{
   text-align:center;
   color:#ff4d91;
-  font-size:25px;
+  font-size:24px;
+}
+
+/* SPECIAL LINE */
+
+.special-line{
+  margin:20px auto;
+  padding:25px;
+  max-width:650px;
+  background:#fff5fa;
+  border-radius:30px;
+  border:3px solid #ffd0e1;
+  font-size:22px;
+  color:#9a5b80;
+  box-shadow:0 10px 30px #a34d7920;
+}
+
+.special-line span{
+  display:block;
+  margin-top:12px;
+  color:#ff4d91;
+  font-weight:bold;
 }
 
 /* FINAL */
 
-.final-card{
-  padding:40px 25px 35px;
-}
-
-.final-doodles{
-  font-size:28px;
-  letter-spacing:10px;
-  color:#ff75a8;
-  animation:doodleFloat 2s ease-in-out infinite;
-}
-
-@keyframes doodleFloat{
-  0%,100%{transform:translateY(0)}
-  50%{transform:translateY(-7px)}
-}
+.final-card{padding:38px 22px}
 
 .cute-doodle{
-  width:250px;
+  width:270px;
   height:190px;
-  margin:8px auto 12px;
+  margin:12px auto;
   position:relative;
   display:flex;
   align-items:center;
@@ -451,115 +368,56 @@ button:active{
   background:#fff7fb;
   border:3px dashed #ffb2ca;
   border-radius:50%;
-  box-shadow:0 15px 35px rgba(120,60,100,.12);
+  box-shadow:0 15px 35px #783c641f;
 }
 
-.cute-cat{
+.cat{
   font-family:monospace;
-  font-size:28px;
+  font-size:27px;
   line-height:1.05;
   color:#8d6684;
-  transform:rotate(-3deg);
-  animation:catFloat 2s ease-in-out infinite;
+  animation:cat 2s infinite;
   white-space:nowrap;
 }
 
-@keyframes catFloat{
-  0%,100%{transform:translateY(0) rotate(-3deg)}
+@keyframes cat{
   50%{transform:translateY(-8px) rotate(3deg)}
 }
 
-.doodle-star{
+.star,.heart{
   position:absolute;
-  color:#ffc04d;
-  font-size:30px;
-  animation:starSpin 2s infinite;
+  animation:float 1.7s infinite;
 }
 
-.star1{
-  top:25px;
-  left:30px;
-}
+.star{color:#ffc04d;font-size:30px}
+.heart{color:#ff6f9f;font-size:28px}
 
-.star2{
-  bottom:25px;
-  right:35px;
-  font-size:24px;
-}
+.s1{top:25px;left:30px}
+.s2{bottom:25px;right:35px}
+.h1{top:28px;right:35px}
+.h2{bottom:25px;left:35px}
 
-@keyframes starSpin{
-  50%{transform:rotate(25deg) scale(1.2)}
-}
-
-.doodle-heart{
-  position:absolute;
-  color:#ff6f9f;
-  font-size:25px;
-  animation:heartFloat 1.7s infinite;
-}
-
-.heart1{
-  top:30px;
-  right:35px;
-}
-
-.heart2{
-  bottom:25px;
-  left:35px;
-}
-
-@keyframes heartFloat{
-  50%{transform:translateY(-8px) scale(1.15)}
-}
-
-.tiny-hearts{
+.tiny{
   position:absolute;
   bottom:7px;
   font-size:17px;
-  animation:tinyFloat 2s infinite;
-}
-
-@keyframes tinyFloat{
-  50%{transform:translateY(-5px)}
-}
-
-.final-card h1{
-  margin-top:10px;
-  animation:lovePop 1s ease;
-}
-
-@keyframes lovePop{
-  0%{
-    transform:scale(.3) rotate(-8deg);
-    opacity:0;
-  }
-  70%{transform:scale(1.1) rotate(3deg)}
-  100%{
-    transform:scale(1);
-    opacity:1;
-  }
 }
 
 .final-birthday{
   color:#9a63c7;
   font-size:24px;
-  margin-bottom:22px;
 }
 
-.final-two-lines{
+.final-two{
   max-width:680px;
-  margin:20px auto;
-  padding:20px 18px;
+  margin:22px auto;
+  padding:20px;
   background:#fff7fb;
-  border-radius:27px;
   border:3px dashed #ffadc7;
+  border-radius:27px;
 }
 
-.final-two-lines p{
-  font-size:18px;
-  line-height:1.7;
-  margin:8px 0;
-}
+.final-two p{margin:8px 0}
 
 .replay{
   margin-top:25px;
@@ -568,105 +426,69 @@ button:active{
   border-radius:28px;
 }
 
-.replay p{
-  font-size:20px;
-  margin-bottom:5px;
-}
-
-.bottom-doodles{
-  margin-top:20px;
-}
-
-.footer-heart{
-  margin-top:20px;
+.footer{
   color:#ff639b;
   letter-spacing:10px;
+  margin-top:18px;
 }
 
-/* MOBILE */
+/* RESPONSIVE */
 
 @media(max-width:600px){
-
-  .card{
-    padding:32px 16px;
-    border-radius:32px;
-  }
-
-  p{
-    font-size:16px;
-  }
-
-  .gift{
-    font-size:80px;
-  }
-
-  .memory-photo{
-    height:55vh;
-  }
-
-  .cute-doodle{
-    width:220px;
-    height:170px;
-  }
-
-  .cute-cat{
-    font-size:24px;
-  }
+  .card{padding:30px 16px;border-radius:32px}
+  p{font-size:16px}
+  .gift{font-size:80px}
+  .memory-img{height:55vh}
+  .cute-doodle{width:225px;height:170px}
 }
 </style>
 </head>
 
 <body>
 
-<!-- BACKGROUND MUSIC -->
 <audio id="bgMusic" src="song.mp3" loop preload="auto"></audio>
-
-<!-- FAHHH -->
 <audio id="fahMusic" src="Fahhh.mp3" preload="auto"></audio>
 
-<!-- DEDICATED SONG VIDEO -->
 <video id="dedicatedSong" playsinline preload="auto">
   <source src="song.mp4" type="video/mp4">
 </video>
 
 
-<!-- ================= INTRO ================= -->
+<!-- INTRO -->
 
 <section class="screen active" id="intro">
 <div class="container">
 <div class="card">
 
-<div class="final-doodles">
-  ✨ 🎀 🌷 ✨ 🐾 💗 ✨
-</div>
+<div class="doodles">✨ 🎀 🌷 🐾 💗 ✨</div>
 
 <div class="gift">🎁</div>
 
 <h1>A Little Surprise For You</h1>
 
-<div class="intro-text">
+<div class="intro-note">
 
 <p>
-  I couldn't give you an in-person gift
-  or surprise this time... 🥺
+I couldn't give you an in-person gift
+or surprise this time... 🥺
 </p>
 
 <p>
-  Sooo I made you a little virtual gift instead. 💌✨
+Sooo I made you a little virtual gift instead. 💌✨
 </p>
 
 <p>
-  It's not much... but it's made with a lot of love. 🫂❤️
+It's small... but it's made with a lot of love. 🫂❤️
 </p>
 
 </div>
 
-<button class="open-btn" onclick="openGift()">
-  Open My Virtual Gift 🎁💗
+<button class="open" onclick="openGift()">
+Open My Virtual Gift 🎁💗
 </button>
 
-<p class="small">
-  P.S. you're not allowed to judge me 😂
+<p style="margin-top:15px;font-size:14px;opacity:.7">
+P.S. Only one particular person is allowed inside 👀
 </p>
 
 </div>
@@ -674,7 +496,7 @@ button:active{
 </section>
 
 
-<!-- ================= PASSWORD ================= -->
+<!-- PASSWORD -->
 
 <section class="screen" id="password">
 <div class="container">
@@ -684,83 +506,72 @@ button:active{
 
 <h2>Waittt... 👀</h2>
 
-<p>
-  This gift is only for one particular person. 🥹
-</p>
-
-<p>
-  Enter the secret code.
-</p>
+<p>This little gift is locked.</p>
+<p>Only you are supposed to open it. 🥹💗</p>
 
 <input
-  id="passwordInput"
-  class="pass-input"
-  type="password"
-  maxlength="2"
-  inputmode="numeric"
-  placeholder="••"
+ id="passwordInput"
+ class="pass"
+ type="password"
+ maxlength="2"
+ inputmode="numeric"
+ placeholder="••"
 >
 
 <div id="passwordError" class="error"></div>
 
-<button onclick="checkPassword()">
-  Unlock 💗
-</button>
+<button onclick="checkPassword()">Unlock 💗</button>
 
 </div>
 </div>
 </section>
 
 
-<!-- ================= QUESTION ================= -->
+<!-- QUESTION -->
 
 <section class="screen" id="question">
 <div class="container">
 <div class="card">
 
-<div class="final-doodles">
-  👀 ✨ 🎀
-</div>
+<div class="doodles">👀 ✨ 🎀 ✨ 👀</div>
 
 <h2>I made something for you...</h2>
 
 <p class="question">
-  Do you really wanna see it? 👀💗
+Do you really wanna see it? 👀💗
 </p>
 
-<button onclick="go('really')">
-  YESSS 😭💗
-</button>
+<button onclick="go('really')">YESSS 😭💗</button>
 
 <br>
 
-<button class="danger" onclick="noWay()">
-  NO 😭
-</button>
+<button class="no" onclick="noWay()">NO 😭</button>
 
 </div>
 </div>
 </section>
 
 
-<!-- ================= REALLY ================= -->
+<!-- REALLY -->
 
 <section class="screen" id="really">
 <div class="container">
 <div class="card">
 
-<div class="final-doodles">
-  👀 👀 👀
-</div>
+<div class="doodles">👀 👀 👀</div>
 
 <h2>Really really? 😭</h2>
 
-<p> You wanna know what's inside? </p>
+<p>
+You actually wanna know what's inside?
+</p>
 
-<p> Like... actually ready? 👀 </p>
+<p>
+Like... no going back now. 👀
+</p>
 
 <button onclick="go('birthday')">
-  One step ahead → 💗
+One step ahead → 💗
 </button>
 
 </div>
@@ -768,32 +579,26 @@ button:active{
 </section>
 
 
-<!-- ================= BIRTHDAY ================= -->
+<!-- BIRTHDAY -->
 
 <section class="screen" id="birthday">
 <div class="container">
 <div class="card">
 
-<div class="crackers">
-  🎆 🎉 🎇
-</div>
+<div class="crackers">🎆 🎉 🎇</div>
 
-<h1 class="birthday-title">
-  Happiest Birthday
-</h1>
+<h1>Happiest Birthday</h1>
 
-<h2>
-  Tanvithaaa 🎂🎀💗
-</h2>
+<h2>Tanvithaaa 🎂🎀💗</h2>
 
 <p>25 August ✨</p>
 
-<p>
-  Today is officially your dayyyy! 🥹🫶🏻
+<p style="margin-top:15px">
+Today is officially your dayyyy! 🥹🫶🏻
 </p>
 
 <button onclick="go('hype')">
-  Wait... there's more 👀
+There's something I wanna tell you... 👀
 </button>
 
 </div>
@@ -801,34 +606,31 @@ button:active{
 </section>
 
 
-<!-- ================= HYPE ================= -->
+<!-- HYPE -->
 
 <section class="screen" id="hype">
 <div class="container">
 <div class="card">
 
-<div class="final-doodles">
-  🌷 ✨ 👀 ✨ 🌷
-</div>
+<div class="doodles">🌷 ✨ 👀 ✨ 🌷</div>
 
 <h2>
-  I found a beautiful lady in this world... 👀
+I found a beautiful lady in this world... 👀
 </h2>
 
-<p class="hype-line">
-  And I thought...
+<p class="hype">And I thought...</p>
+
+<p class="hype">
+"This person deserves something special." 🥹💗
 </p>
 
-<p class="hype-line">
-  "Okayyy, this person deserves something special." 🥹💗
-</p>
-
-<p class="suspense">
-  But before I show you... there's one tiny problem. 😭
+<p>
+But before that...
+I need to show you something very important. 😂
 </p>
 
 <button onclick="go('comedy')">
-  One step ahead → 😂
+One step ahead → 😂
 </button>
 
 </div>
@@ -836,38 +638,28 @@ button:active{
 </section>
 
 
-<!-- ================= COMEDY ================= -->
+<!-- COMEDY -->
 
 <section class="screen" id="comedy">
 <div class="container">
 <div class="card">
 
-<div class="final-doodles">
-  😂 ✨ 🐱 ✨ 😂
-</div>
+<div class="doodles">😂 ✨ 🐾 ✨ 😂</div>
 
-<h2>Fahhhhh 😭😂</h2>
+<h2>Okay... don't judge me 😭</h2>
 
-<img
-  src="comedy.jpg"
-  class="comedy-img"
-  alt="Funny memory"
->
+<img src="comedy.jpg" class="comedy">
 
 <div class="fah">
-  <span>FAHHHH 😭😂</span>
+<span>FAHHHH 😭😂</span>
 </div>
 
-<p>
-  Okay okayyy... don't kill me. 😭
-</p>
-
-<p>
-  I HAD TO PUT THIS HERE. 😂
+<p style="margin-top:20px">
+I HAD to put this here. 😂
 </p>
 
 <button onclick="go('song')">
-  Okay nexttt → 🎵
+Okay okay... nexttt 🎵
 </button>
 
 </div>
@@ -875,40 +667,36 @@ button:active{
 </section>
 
 
-<!-- ================= DEDICATED SONG ================= -->
+<!-- SONG -->
 
 <section class="screen" id="song">
 <div class="container">
 <div class="card">
 
-<div class="final-doodles">
-  🎵 💗 🎀 🎵
-</div>
+<div class="doodles">🎵 💗 🎀 🎵</div>
 
-<h2>
-  A Song Dedicated To You 💗
-</h2>
+<h2>A Song Dedicated To You 💗</h2>
 
 <p>
-  This one is especially for you, Thanuuu. 🥹🫶🏻
+This one is especially for you, Thanuuu. 🥹
 </p>
 
-<div class="music-card">
+<div class="music-box">
 
-<div class="music-icon">🎧</div>
+<div class="music-note">🎧</div>
 
 <p>
-  Let it play till the end, okay? 🥺
+Just listen to this one till the end, okay? 🥺
 </p>
 
-<p id="songStatus" class="song-status">
-  🎶 Starting your song...
+<p id="songStatus" class="status">
+🎶 Starting...
 </p>
 
 </div>
 
 <button onclick="songNext()">
-  Next → 💗
+Next → 💗
 </button>
 
 </div>
@@ -916,69 +704,60 @@ button:active{
 </section>
 
 
-<!-- ================= WARNING ================= -->
+<!-- WARNING -->
 
 <div id="warning" class="warning">
-
 <div class="warning-box">
 
-<div class="emoji">🥺🎧</div>
+<div class="warning-emoji">🥺🎧</div>
 
 <h2>Waittt!</h2>
 
 <p>
-  Listen to it fullyyy first. 🥹💗
+Listen to it fullyyy first. 🥹💗
 </p>
 
 <p>
-  No skipping this one. 👀
+No skipping this one. 👀
 </p>
 
 <button onclick="closeWarning()">
-  Okayyy, I'll listen 😭❤️
+Okayyy, I'll listen 😭❤️
 </button>
 
 </div>
 </div>
 
 
-<!-- ================= MEMORIES ================= -->
+<!-- MEMORIES -->
 
 <section class="screen" id="memories">
 <div class="container">
-<div class="card memory-card">
+<div class="card">
 
-<div class="final-doodles">
-  📸 💗 ✨ 📸
-</div>
+<div class="doodles">📸 💗 ✨ 📸</div>
 
-<h2>
-  Some of my favourite memories 🥹
-</h2>
+<h2>Our little memories 🥹</h2>
 
-<p class="memory-number" id="memoryNumber">
-  1 / 12
+<p>
+Some of my favourite moments with you.
 </p>
 
+<p class="number" id="memoryNumber">1 / 12</p>
+
 <img
-  id="memoryPhoto"
-  class="memory-photo"
-  src="photo1.jpg"
-  alt="Memory"
+ id="memoryPhoto"
+ class="memory-img"
+ src="photo1.jpg"
 >
 
-<p class="swipe-note">
-  Swipe / use the buttons to see the next one → 👀
+<p style="font-size:14px;opacity:.7">
+Swipe the photo or use the buttons → 👀
 </p>
 
 <div class="memory-buttons">
-
 <button onclick="previousMemory()">←</button>
-
-<button onclick="nextMemory()">
-  Next memory 💗 →
-</button>
-
+<button onclick="nextMemory()">Next memory 💗 →</button>
 </div>
 
 </div>
@@ -986,21 +765,46 @@ button:active{
 </section>
 
 
-<!-- ================= MESSAGE ================= -->
+<!-- LETTER INTRO -->
+
+<section class="screen" id="letterIntro">
+<div class="container">
+<div class="card">
+
+<div class="doodles">💌 🌷 ✨ 💗</div>
+
+<h2>There's one more thing...</h2>
+
+<p>
+I couldn't say all of this properly in person...
+</p>
+
+<p>
+So I wrote it down instead. 🥹
+</p>
+
+<button onclick="go('message')">
+Open my letter 💌
+</button>
+
+</div>
+</div>
+</section>
+
+
+<!-- MESSAGE -->
 
 <section class="screen" id="message">
 <div class="container">
 <div class="card">
 
-<div class="final-doodles">
-  💌 🌷 ✨ 💗
-</div>
+<div class="doodles">💌 🌷 ✨ 💗</div>
 
-<h2>
-  A little message from me to you... 💌
-</h2>
+<h2>A little message from me to you... 💌</h2>
 
-<div class="message">
+<div class="letter-wrap">
+<div class="envelope">
+<div class="letter">
 
 <p>Thanuuu 🥹❤️</p>
 
@@ -1030,10 +834,10 @@ nuvvu ala na life lo oka person ayipoyavvv 🥹🫶🏻
 
 <p>
 Nenu literally words lo cheppalekapothunna
-how much I love you 😭❤️ Sometimes I wish I could
-just make you understand everything I feel without
-actually having to say it, because I don't think
-words will ever be enough.
+how much I love you 😭❤️
+Sometimes I wish I could just make you understand
+everything I feel without actually having to say it,
+because I don't think words will ever be enough.
 </p>
 
 <p>
@@ -1154,9 +958,11 @@ in your corner, cheering for you. 🌷♾️
 </p>
 
 </div>
+</div>
+</div>
 
-<button onclick="go('final')">
-  One last thing... 🥹
+<button onclick="go('special')">
+One last thing... 🥹
 </button>
 
 </div>
@@ -1164,78 +970,113 @@ in your corner, cheering for you. 🌷♾️
 </section>
 
 
-<!-- ================= FINAL ================= -->
+<!-- SPECIAL EMOTIONAL SCREEN -->
+
+<section class="screen" id="special">
+<div class="container">
+<div class="card">
+
+<div class="doodles">🌙 ✨ 🥹 ✨ 🌙</div>
+
+<h2>One tiny thought... 💗</h2>
+
+<div class="special-line">
+
+If I could give you one thing today...
+
+<span>
+it would be a day where you could see yourself
+the way I see you. 🥹❤️
+</span>
+
+</div>
+
+<p>
+And maybe someday, I won't have to send you
+a virtual gift for your birthday... 👀
+</p>
+
+<p style="margin-top:12px">
+I'll just be standing there beside you,
+annoying you in person. 😂🫂
+</p>
+
+<button onclick="go('final')">
+Okay... now the actual ending 💗
+</button>
+
+</div>
+</div>
+</section>
+
+
+<!-- FINAL -->
 
 <section class="screen" id="final">
 <div class="container">
 <div class="card final-card">
 
-<div class="final-doodles">
-  ✨ 🎀 🌷 ✨ 🐾 💗 ✨
+<div class="doodles">
+✨ 🎀 🌷 🐾 💗 ✨
 </div>
 
 <div class="cute-doodle">
 
-  <div class="doodle-star star1">✦</div>
-  <div class="doodle-star star2">✧</div>
+<div class="star s1">✦</div>
+<div class="star s2">✧</div>
 
-  <div class="doodle-heart heart1">♡</div>
-  <div class="doodle-heart heart2">♥</div>
+<div class="heart h1">♡</div>
+<div class="heart h2">♥</div>
 
-  <div class="cute-cat">
-    /\_/\\
-    <br>
-    ( o.o )
-    <br>
-    &gt; ^ &lt;
-  </div>
+<div class="cat">
+/\_/\\
+<br>
+( o.o )
+<br>
+&gt; ^ &lt;
+</div>
 
-  <div class="tiny-hearts">
-    💗 💕 💗
-  </div>
+<div class="tiny">💗 💕 💗</div>
 
 </div>
 
-<h1>
-  LOVE YOUUU 💗
-</h1>
+<h1>LOVE YOUUU 💗</h1>
 
 <p class="final-birthday">
-  Happiest Birthday, Tanvithaaa 🎂🎀
+Happiest Birthday, Tanvithaaa 🎂🎀
 </p>
 
-<div class="final-two-lines">
+<div class="final-two">
 
 <p>
-  Maybe next time... or the birthdays after that,
-  I hope I get to be there in person beside you. 🥹🎂❤️
+Maybe not this birthday...
+but I'm really hoping that upcoming birthdays
+at least one of them will be in person. 🥹🎂❤️
 </p>
 
 <p>
-  Until then, this little virtual gift is my way
-  of saying — I wish I was there. 🫂✨
+Until then, this little virtual gift is my way
+of saying — I wish I was there beside you. 🫂✨
 </p>
 
 </div>
 
-<div class="final-doodles bottom-doodles">
-  🌷 ♡ ✨ ♡ 🌷
+<div class="doodles">
+🌷 ♡ ✨ ♡ 🌷
 </div>
 
 <div class="replay">
 
-<p>
-  Wanna see it all again? 👀💗
-</p>
+<p>Wanna relive our little story? 👀💗</p>
 
 <button onclick="replayWebsite()">
-  ↻ Replay our little story 💌
+↻ Replay our little story 💌
 </button>
 
 </div>
 
-<div class="footer-heart">
-  ♡ ♡ ♡
+<div class="footer">
+♡ ♡ ♡
 </div>
 
 </div>
@@ -1245,243 +1086,154 @@ in your corner, cheering for you. 🌷♾️
 
 <script>
 
-/* ================= AUDIO ================= */
+/* AUDIO */
 
-const bgMusic =
-  document.getElementById("bgMusic");
+const bgMusic=document.getElementById("bgMusic");
+const fahMusic=document.getElementById("fahMusic");
+const dedicatedSong=document.getElementById("dedicatedSong");
+const songStatus=document.getElementById("songStatus");
 
-const fahMusic =
-  document.getElementById("fahMusic");
+bgMusic.loop=true;
+bgMusic.volume=.22;
+fahMusic.volume=1;
+dedicatedSong.volume=1;
 
-const dedicatedSong =
-  document.getElementById("dedicatedSong");
+let passwordAttempts=0;
+let dedicatedFinished=false;
+let memoryIndex=0;
 
-const songStatus =
-  document.getElementById("songStatus");
-
-bgMusic.loop = true;
-bgMusic.volume = 0.22;
-
-fahMusic.volume = 1;
-dedicatedSong.volume = 1;
-
-
-/* ================= VARIABLES ================= */
-
-let passwordAttempts = 0;
-let dedicatedFinished = false;
-let memoryIndex = 0;
-
-const memories = [
-  "photo1.jpg",
-  "photo2.jpg",
-  "photo3.jpg",
-  "photo4.jpg",
-  "photo5.jpg",
-  "photo6.jpg",
-  "photo7.jpg",
-  "photo8.jpg",
-  "photo9.jpg",
-  "photo10.jpg",
-  "photo11.jpg",
-  "photo12.jpg"
+const memories=[
+"photo1.jpg",
+"photo2.jpg",
+"photo3.jpg",
+"photo4.jpg",
+"photo5.jpg",
+"photo6.jpg",
+"photo7.jpg",
+"photo8.jpg",
+"photo9.jpg",
+"photo10.jpg",
+"photo11.jpg",
+"photo12.jpg"
 ];
 
 
-/* ================= SCREEN ================= */
+/* SCREEN */
 
 function go(id){
 
-  document
-    .querySelectorAll(".screen")
-    .forEach(screen=>{
-      screen.classList.remove("active");
-    });
+  document.querySelectorAll(".screen")
+  .forEach(x=>x.classList.remove("active"));
 
-  const target =
-    document.getElementById(id);
+  const target=document.getElementById(id);
 
-  if(target){
-    target.classList.add("active");
-  }
+  if(target)target.classList.add("active");
 
-  window.scrollTo({
-    top:0,
-    behavior:"smooth"
-  });
+  window.scrollTo({top:0,behavior:"smooth"});
 
+  if(id==="comedy")startFahhh();
 
-  if(id === "comedy"){
-    startFahhh();
-  }
+  if(id==="song")startDedicatedSong();
 
-  if(id === "song"){
-    startDedicatedSong();
-  }
-
-  if(id === "memories" ||
-     id === "message"){
-    resumeBackground();
-  }
+  if(id==="memories" || id==="letterIntro" || id==="message")
+    resumeBG();
 }
 
 
-/* ================= OPEN GIFT ================= */
+/* INTRO */
 
 function openGift(){
 
-  /*
-    This click gives Edge permission
-    to start audio.
-  */
+  bgMusic.volume=.22;
 
-  bgMusic.volume = 0.22;
-
-  bgMusic.play().catch(()=>{
-    console.log("Audio blocked by browser.");
-  });
+  bgMusic.play().catch(()=>{});
 
   go("password");
 }
 
 
-/* ================= PASSWORD ================= */
+/* PASSWORD */
 
 function checkPassword(){
 
-  const input =
-    document.getElementById("passwordInput");
+  const input=document.getElementById("passwordInput");
+  const error=document.getElementById("passwordError");
 
-  const error =
-    document.getElementById("passwordError");
+  if(input.value==="04"){
 
-  if(input.value === "04"){
-
-    error.innerHTML =
-      "Unlocked... 🥹💗";
+    error.innerHTML="4 years... and still counting. 🥹❤️";
 
     setTimeout(()=>{
       go("question");
-    },600);
+    },900);
 
     return;
   }
 
   passwordAttempts++;
 
-  if(passwordAttempts === 1){
+  if(passwordAttempts===1)
+    error.innerHTML="Password incorrect 😭 Try again...";
 
-    error.innerHTML =
-      "Password incorrect 😭 Try again...";
+  else if(passwordAttempts===2)
+    error.innerHTML="Again incorrect 😭😂 Try again...";
 
-  }else if(passwordAttempts === 2){
+  else
+    error.innerHTML="Think about ussss 👀💗";
 
-    error.innerHTML =
-      "Again incorrect 😭😂 Try again...";
-
-  }else{
-
-    error.innerHTML =
-      "Think about ussss 👀💗";
-
-  }
-
-  input.value = "";
+  input.value="";
 }
 
 
-/* ================= NO ================= */
+/* NO */
 
 function noWay(){
 
-  alert(
-    "NO antey... I'll kill you 😭😂❤️"
-  );
+  alert("NO antey... I'll kill you 😭😂❤️");
 
 }
 
 
-/* ================= FADE AUDIO ================= */
-
-function fadeBackground(target,duration){
-
-  const start = bgMusic.volume;
-  const difference = target-start;
-  const steps = 25;
-  let step = 0;
-
-  const timer =
-    setInterval(()=>{
-
-      step++;
-
-      bgMusic.volume =
-        Math.max(
-          0,
-          Math.min(
-            1,
-            start +
-            difference*(step/steps)
-          )
-        );
-
-      if(step >= steps){
-        clearInterval(timer);
-      }
-
-    },duration/steps);
-}
-
-
-/* ================= FAHHH ================= */
+/* FAHH */
 
 function startFahhh(){
 
-  fadeBackground(.025,700);
+  fadeBG(.025,700);
 
   fahMusic.pause();
-  fahMusic.currentTime = 0;
+  fahMusic.currentTime=0;
 
-  fahMusic.play().catch(()=>{
-    console.log("Fahhh waiting...");
-  });
+  fahMusic.play().catch(()=>{});
 }
 
+fahMusic.addEventListener("ended",()=>{
 
-fahMusic.addEventListener(
-  "ended",
-  ()=>{
+  fadeBG(.22,1200);
 
-    if(bgMusic.paused){
-      bgMusic.play().catch(()=>{});
-    }
-
-    fadeBackground(.22,1200);
-  }
-);
+});
 
 
-/* ================= DEDICATED SONG ================= */
+/* DEDICATED SONG */
 
 function startDedicatedSong(){
 
-  dedicatedFinished = false;
+  dedicatedFinished=false;
 
-  fadeBackground(0,600);
+  fadeBG(0,600);
 
   setTimeout(()=>{
 
     bgMusic.pause();
 
     dedicatedSong.pause();
-    dedicatedSong.currentTime = 0;
+    dedicatedSong.currentTime=0;
 
-    songStatus.innerHTML =
+    songStatus.innerHTML=
       "🎶 Playing just for you... 🥹💗";
 
     dedicatedSong.play().catch(()=>{
 
-      songStatus.innerHTML =
+      songStatus.innerHTML=
         "🎵 Tap once to start the song 💗";
 
     });
@@ -1490,33 +1242,30 @@ function startDedicatedSong(){
 }
 
 
-dedicatedSong.addEventListener(
-  "ended",
-  ()=>{
+dedicatedSong.addEventListener("ended",()=>{
 
-    dedicatedFinished = true;
+  dedicatedFinished=true;
 
-    songStatus.innerHTML =
-      "You listened till the end... 🥹❤️";
+  songStatus.innerHTML=
+    "You listened till the end... 🥹❤️";
 
-    bgMusic.volume = 0;
+  bgMusic.volume=0;
 
-    bgMusic.play().catch(()=>{});
+  bgMusic.play().catch(()=>{});
 
-    fadeBackground(.22,1800);
-  }
-);
+  fadeBG(.22,1800);
+
+});
 
 
-/* ================= SONG NEXT ================= */
+/* SONG NEXT */
 
 function songNext(){
 
   if(!dedicatedFinished){
 
-    document
-      .getElementById("warning")
-      .classList.add("show");
+    document.getElementById("warning")
+    .classList.add("show");
 
     return;
   }
@@ -1525,46 +1274,65 @@ function songNext(){
 }
 
 
-/* ================= CLOSE WARNING ================= */
-
 function closeWarning(){
 
-  document
-    .getElementById("warning")
-    .classList.remove("show");
+  document.getElementById("warning")
+  .classList.remove("show");
 
   dedicatedSong.play().catch(()=>{});
+
 }
 
 
-/* ================= RESUME BG ================= */
+/* AUDIO FADE */
 
-function resumeBackground(){
+function fadeBG(target,duration){
 
-  if(bgMusic.paused){
+  const start=bgMusic.volume;
+  const diff=target-start;
+  const steps=25;
+  let step=0;
 
-    bgMusic.play().catch(()=>{});
+  const timer=setInterval(()=>{
 
-  }
+    step++;
 
-  fadeBackground(.22,1000);
+    bgMusic.volume=Math.max(
+      0,
+      Math.min(1,start+diff*(step/steps))
+    );
+
+    if(step>=steps)
+      clearInterval(timer);
+
+  },duration/steps);
 }
 
 
-/* ================= MEMORIES ================= */
+function resumeBG(){
+
+  bgMusic.play().catch(()=>{});
+
+  fadeBG(.22,1000);
+}
+
+
+/* MEMORIES */
 
 function showMemory(){
 
-  const image =
-    document.getElementById("memoryPhoto");
+  const img=document.getElementById("memoryPhoto");
 
-  const number =
-    document.getElementById("memoryNumber");
+  img.classList.remove("change");
 
-  image.src =
-    memories[memoryIndex];
+  void img.offsetWidth;
 
-  number.innerHTML =
+  img.src=memories[memoryIndex];
+
+  img.classList.add("change");
+
+  document.getElementById("memoryNumber")
+  .innerHTML=
     `${memoryIndex+1} / ${memories.length}`;
 
 }
@@ -1574,9 +1342,8 @@ function nextMemory(){
 
   memoryIndex++;
 
-  if(memoryIndex >= memories.length){
-    memoryIndex = 0;
-  }
+  if(memoryIndex>=memories.length)
+    memoryIndex=0;
 
   showMemory();
 }
@@ -1586,50 +1353,45 @@ function previousMemory(){
 
   memoryIndex--;
 
-  if(memoryIndex < 0){
-    memoryIndex = memories.length-1;
-  }
+  if(memoryIndex<0)
+    memoryIndex=memories.length-1;
 
   showMemory();
 }
 
 
-/* ================= SWIPE ================= */
+/* SWIPE */
 
-let touchStartX = 0;
-let touchEndX = 0;
+let startX=0;
 
-const memoryPhoto =
-  document.getElementById("memoryPhoto");
+document.getElementById("memoryPhoto")
+.addEventListener("touchstart",e=>{
+  startX=e.changedTouches[0].screenX;
+});
 
-memoryPhoto.addEventListener(
-  "touchstart",
-  event=>{
-    touchStartX =
-      event.changedTouches[0].screenX;
-  }
-);
+document.getElementById("memoryPhoto")
+.addEventListener("touchend",e=>{
 
-memoryPhoto.addEventListener(
-  "touchend",
-  event=>{
+  const endX=e.changedTouches[0].screenX;
 
-    touchEndX =
-      event.changedTouches[0].screenX;
+  if(startX-endX>50)nextMemory();
+  if(endX-startX>50)previousMemory();
 
-    if(touchStartX-touchEndX > 50){
-      nextMemory();
-    }
-
-    if(touchEndX-touchStartX > 50){
-      previousMemory();
-    }
-
-  }
-);
+});
 
 
-/* ================= REPLAY ================= */
+/* ENTER PASSWORD */
+
+document.getElementById("passwordInput")
+.addEventListener("keydown",e=>{
+
+  if(e.key==="Enter")
+    checkPassword();
+
+});
+
+
+/* REPLAY */
 
 function replayWebsite(){
 
@@ -1637,48 +1399,24 @@ function replayWebsite(){
   fahMusic.pause();
   dedicatedSong.pause();
 
-  bgMusic.currentTime = 0;
-  fahMusic.currentTime = 0;
-  dedicatedSong.currentTime = 0;
+  bgMusic.currentTime=0;
+  fahMusic.currentTime=0;
+  dedicatedSong.currentTime=0;
 
-  bgMusic.volume = .22;
+  bgMusic.volume=.22;
 
-  passwordAttempts = 0;
-  dedicatedFinished = false;
-  memoryIndex = 0;
+  passwordAttempts=0;
+  dedicatedFinished=false;
+  memoryIndex=0;
 
-  document.getElementById(
-    "passwordInput"
-  ).value = "";
-
-  document.getElementById(
-    "passwordError"
-  ).innerHTML = "";
+  document.getElementById("passwordInput").value="";
+  document.getElementById("passwordError").innerHTML="";
 
   showMemory();
 
   go("intro");
-
 }
 
-
-/* ================= ENTER PASSWORD ================= */
-
-document
-  .getElementById("passwordInput")
-  .addEventListener(
-    "keydown",
-    event=>{
-
-      if(event.key === "Enter"){
-        checkPassword();
-      }
-
-    }
-  );
-
-
-/* ================= START ================= */
 
 showMemory();
 
@@ -1686,4 +1424,3 @@ showMemory();
 
 </body>
 </html>
-
