@@ -3,1103 +3,3260 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>For Tanvitha 💗</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+
+/* =========================
+   BASIC
+========================= */
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
 
 body{
-    font-family:"Trebuchet MS",Arial,sans-serif;
-    color:#542d55;
-    background:linear-gradient(135deg,#ffd9e8,#e8dcff,#ffe6d2);
     min-height:100vh;
     overflow-x:hidden;
+
+    font-family:
+        "Trebuchet MS",
+        "Comic Sans MS",
+        Arial,
+        sans-serif;
+
+    color:#583650;
+
+    background:
+        radial-gradient(circle at 10% 10%, #fff6fb 0 8%, transparent 25%),
+        radial-gradient(circle at 90% 20%, #eee5ff 0 8%, transparent 25%),
+        linear-gradient(
+            135deg,
+            #ffdce9,
+            #eee0ff,
+            #ffe9d8
+        );
 }
+
+
+/* =========================
+   SCREEN
+========================= */
 
 .screen{
     min-height:100vh;
+
     display:none;
+
     justify-content:center;
     align-items:center;
+
     text-align:center;
-    padding:35px 20px;
+
+    padding:35px 18px;
+
     position:relative;
+
     overflow:hidden;
 }
 
 .screen.active{
     display:flex;
-    animation:fadeIn .8s ease;
+
+    animation:
+        screenIn .8s ease;
 }
 
 .content{
     width:min(900px,100%);
+
     position:relative;
+
     z-index:5;
 }
 
+
+@keyframes screenIn{
+
+    from{
+        opacity:0;
+        transform:
+            translateY(25px)
+            scale(.97);
+    }
+
+    to{
+        opacity:1;
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* =========================
+   TEXT
+========================= */
+
 h1{
-    font-size:clamp(42px,9vw,85px);
+    font-size:
+        clamp(42px,9vw,82px);
+
     line-height:1.05;
+
     margin:20px 0;
 }
 
 h2{
-    font-size:clamp(30px,6vw,58px);
-    margin-bottom:25px;
+    font-size:
+        clamp(30px,6vw,56px);
+
+    margin-bottom:24px;
 }
 
 p{
     font-size:19px;
+
     line-height:1.8;
 }
 
+
+/* =========================
+   BUTTONS
+========================= */
+
 button{
+
     border:0;
-    margin:15px 8px 0;
-    padding:16px 30px;
+
+    padding:
+        15px 28px;
+
+    margin:
+        12px 7px;
+
     border-radius:50px;
-    background:linear-gradient(135deg,#ff6f9f,#a979e8);
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff709f,
+            #a97ce8
+        );
+
     color:white;
+
     font-size:17px;
+
     font-weight:bold;
+
     cursor:pointer;
-    box-shadow:0 12px 28px rgba(150,70,140,.25);
+
+    box-shadow:
+        0 12px 30px
+        rgba(150,70,140,.23);
+
     transition:.3s;
 }
 
 button:hover{
-    transform:translateY(-3px) scale(1.05);
+
+    transform:
+        translateY(-3px)
+        scale(1.04);
+}
+
+button:disabled{
+
+    opacity:.45;
+
+    cursor:not-allowed;
+
+    transform:none;
 }
 
 .no-btn{
-    background:rgba(255,255,255,.75);
-    color:#542d55;
+
+    background:
+        rgba(255,255,255,.8);
+
+    color:#583650;
 }
+
+
+/* =========================
+   CUTE CARTOON DOODLES
+========================= */
 
 .doodle{
+
     position:absolute;
-    font-size:55px;
-    animation:float 3s ease-in-out infinite;
+
+    font-size:50px;
+
     pointer-events:none;
+
+    animation:
+        floatDoodle
+        3s
+        ease-in-out
+        infinite;
+
+    opacity:.9;
 }
 
-.d1{top:10%;left:7%}
-.d2{top:15%;right:8%;animation-delay:.5s}
-.d3{bottom:13%;left:10%;animation-delay:1s}
-.d4{bottom:12%;right:9%;animation-delay:1.5s}
-
-@keyframes fadeIn{
-    from{opacity:0;transform:translateY(30px) scale(.97)}
-    to{opacity:1;transform:translateY(0) scale(1)}
+.d1{
+    top:7%;
+    left:5%;
 }
 
-@keyframes float{
-    0%,100%{transform:translateY(0) rotate(-5deg)}
-    50%{transform:translateY(-14px) rotate(6deg)}
+.d2{
+    top:12%;
+    right:6%;
+
+    animation-delay:.5s;
 }
+
+.d3{
+    bottom:10%;
+    left:7%;
+
+    animation-delay:1s;
+}
+
+.d4{
+    bottom:9%;
+    right:7%;
+
+    animation-delay:1.5s;
+}
+
+@keyframes floatDoodle{
+
+    0%,100%{
+        transform:
+            translateY(0)
+            rotate(-5deg);
+    }
+
+    50%{
+        transform:
+            translateY(-13px)
+            rotate(6deg);
+    }
+}
+
+
+/* =========================
+   CAT
+========================= */
+
+.cat{
+    font-size:90px;
+
+    display:inline-block;
+
+    animation:
+        catFloat
+        2.5s
+        ease-in-out
+        infinite;
+}
+
+@keyframes catFloat{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+
+/* =========================
+   VIRTUAL GIFT
+========================= */
+
+.gift-box{
+
+    font-size:110px;
+
+    animation:
+        giftBounce
+        1.5s
+        ease-in-out
+        infinite;
+}
+
+@keyframes giftBounce{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:
+            translateY(-12px)
+            rotate(3deg);
+    }
+}
+
+.virtual-title{
+
+    color:#ff4f91;
+
+    text-shadow:
+        0 5px 25px
+        rgba(255,80,145,.18);
+}
+
+.virtual-card{
+
+    max-width:720px;
+
+    margin:auto;
+
+    padding:45px 25px;
+
+    border-radius:40px;
+
+    background:
+        rgba(255,255,255,.66);
+
+    border:
+        2px solid
+        rgba(255,255,255,.7);
+
+    box-shadow:
+        0 25px 70px
+        rgba(100,50,100,.13);
+
+    backdrop-filter:
+        blur(10px);
+}
+
+
+/* =========================
+   PASSWORD
+========================= */
 
 .lock{
     font-size:85px;
-    animation:heartbeat 1.4s infinite;
+
+    animation:
+        heartbeat
+        1.4s
+        infinite;
 }
 
 @keyframes heartbeat{
-    0%,100%{transform:scale(1)}
-    50%{transform:scale(1.15)}
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.13);
+    }
 }
 
 .code-box{
-    margin:25px auto;
+
+    display:block;
+
     width:220px;
+
+    margin:
+        25px auto;
+
     padding:17px;
+
     border-radius:20px;
-    border:2px solid rgba(255,111,159,.35);
-    background:rgba(255,255,255,.7);
-    font-size:25px;
+
+    border:
+        2px solid
+        rgba(255,111,159,.35);
+
+    background:
+        rgba(255,255,255,.75);
+
+    font-size:27px;
+
     text-align:center;
+
     outline:none;
-    color:#542d55;
+
+    color:#583650;
 }
 
 .error{
-    min-height:50px;
-    margin-top:15px;
+
+    min-height:60px;
+
     color:#d94c82;
+
     font-weight:bold;
+
+    margin-top:12px;
+}
+
+
+/* =========================
+   BIRTHDAY
+========================= */
+
+.birthday-title{
+
+    color:#ff4d91;
+
+    animation:
+        birthdayPop
+        1.2s
+        ease;
 }
 
 .date{
-    font-size:clamp(35px,7vw,70px);
+
+    font-size:
+        clamp(35px,7vw,70px);
+
     font-weight:bold;
-    color:#8c5bc9;
+
+    color:#895dc8;
 }
 
-.birthday-title{
-    color:#ff4d91;
-    text-shadow:0 5px 25px rgba(255,80,145,.25);
-    animation:pop 1.2s ease;
+@keyframes birthdayPop{
+
+    0%{
+        opacity:0;
+        transform:scale(.2);
+    }
+
+    70%{
+        transform:scale(1.1);
+    }
+
+    100%{
+        opacity:1;
+        transform:scale(1);
+    }
 }
 
-@keyframes pop{
-    0%{opacity:0;transform:scale(.2)}
-    70%{transform:scale(1.12)}
-    100%{opacity:1;transform:scale(1)}
-}
 
-.video-card{
-    width:min(620px,95%);
+/* =========================
+   DEDICATED SONG
+========================= */
+
+.song-card{
+
+    width:min(700px,95%);
+
     margin:30px auto;
-    padding:14px;
-    background:rgba(255,255,255,.7);
-    border-radius:30px;
-    box-shadow:0 20px 50px rgba(0,0,0,.15);
+
+    padding:25px;
+
+    border-radius:35px;
+
+    background:
+        rgba(255,255,255,.78);
+
+    box-shadow:
+        0 25px 60px
+        rgba(70,40,90,.16);
 }
 
-.video-card video{
-    width:100%;
-    display:block;
-    border-radius:22px;
+.song-cat{
+
+    font-size:75px;
+
+    margin-bottom:15px;
 }
+
+.song-title{
+
+    color:#ff548e;
+}
+
+.song-note{
+
+    font-size:18px;
+
+    margin-bottom:22px;
+}
+
+audio{
+
+    width:100%;
+
+    margin-top:15px;
+}
+
+
+/* =========================
+   NEXT WARNING
+========================= */
+
+.warning-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+        rgba(35,15,40,.65);
+
+    backdrop-filter:
+        blur(7px);
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:999;
+}
+
+.warning-overlay.show{
+    display:flex;
+
+    animation:
+        fadeIn .3s ease;
+}
+
+.warning-card{
+
+    width:min(450px,90%);
+
+    padding:35px 25px;
+
+    border-radius:32px;
+
+    background:
+        #fff7fb;
+
+    box-shadow:
+        0 30px 80px
+        rgba(0,0,0,.3);
+
+    animation:
+        warningPop .4s ease;
+}
+
+.warning-icon{
+
+    font-size:60px;
+}
+
+.warning-card h2{
+
+    color:#ff4d91;
+
+    font-size:32px;
+
+    margin:10px 0;
+}
+
+@keyframes warningPop{
+
+    from{
+        transform:
+            scale(.7)
+            rotate(-3deg);
+
+        opacity:0;
+    }
+
+    to{
+        transform:
+            scale(1)
+            rotate(0);
+
+        opacity:1;
+    }
+}
+
+
+/* =========================
+   COMEDY
+========================= */
 
 .comedy-img{
-    width:min(420px,90%);
+
+    width:min(430px,90%);
+
     max-height:520px;
+
     object-fit:cover;
+
     border-radius:30px;
-    box-shadow:0 20px 50px rgba(0,0,0,.2);
+
+    box-shadow:
+        0 25px 55px
+        rgba(0,0,0,.18);
 }
 
 .fah{
-    font-size:clamp(40px,9vw,90px);
+
+    font-size:
+        clamp(45px,9vw,90px);
+
     font-weight:bold;
-    margin:15px 0;
-    animation:shake .5s infinite;
+
+    animation:
+        shake .45s infinite;
 }
 
 @keyframes shake{
-    0%,100%{transform:rotate(0)}
-    25%{transform:rotate(-3deg)}
-    75%{transform:rotate(3deg)}
+
+    0%,100%{
+        transform:rotate(0);
+    }
+
+    25%{
+        transform:rotate(-3deg);
+    }
+
+    75%{
+        transform:rotate(3deg);
+    }
 }
 
-.memory-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
-    gap:22px;
-    margin-top:35px;
+
+/* =========================
+   MEMORIES
+========================= */
+
+.memory-slider{
+
+    width:min(500px,92vw);
+
+    margin:30px auto 15px;
+
+    position:relative;
+
+    touch-action:pan-y;
+
+    user-select:none;
 }
 
-.memory{
-    background:rgba(255,255,255,.78);
-    padding:11px;
-    border-radius:25px;
-    box-shadow:0 15px 35px rgba(0,0,0,.1);
-    animation:memoryIn .8s ease forwards;
+.memory-slide{
+
+    display:none;
+
+    padding:14px;
+
+    border-radius:30px;
+
+    background:
+        rgba(255,255,255,.83);
+
+    box-shadow:
+        0 20px 50px
+        rgba(0,0,0,.14);
+
+    animation:
+        memoryIn .5s ease;
 }
 
-.memory img{
+.memory-slide.active{
+    display:block;
+}
+
+.memory-slide img{
+
     width:100%;
-    height:240px;
+
+    height:min(560px,65vh);
+
     object-fit:cover;
-    border-radius:18px;
+
+    border-radius:22px;
+
+    display:block;
 }
 
-.memory p{
-    font-size:15px;
-    padding:12px 4px 8px;
+.memory-slide p{
+
+    padding:
+        18px 8px 8px;
+
+    font-size:17px;
 }
 
-@keyframes memoryIn{
-    from{opacity:0;transform:translateY(40px)}
-    to{opacity:1;transform:translateY(0)}
+.favorite-slide{
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,215,232,.95),
+            rgba(232,218,255,.95)
+        );
+
+    border:
+        3px solid
+        rgba(255,111,159,.35);
+
+    animation:
+        favoriteGlow
+        2s
+        ease-in-out
+        infinite;
 }
 
-.favorite{
-    grid-column:1/-1;
-    background:linear-gradient(135deg,rgba(255,210,230,.95),rgba(231,215,255,.95));
-    border:3px solid rgba(255,111,159,.35);
-    animation:favoriteGlow 2s ease-in-out infinite;
-}
+.favorite-top{
 
-.favorite img{
-    height:min(550px,65vh);
-}
+    font-size:22px;
 
-.favorite-label{
-    font-size:27px;
     font-weight:bold;
+
     color:#ff4d91;
-    padding:15px 5px 5px;
+
+    padding:
+        8px 5px 15px;
 }
 
 @keyframes favoriteGlow{
-    0%,100%{box-shadow:0 15px 40px rgba(255,80,150,.15)}
-    50%{box-shadow:0 15px 60px rgba(255,80,150,.45)}
+
+    0%,100%{
+        box-shadow:
+            0 15px 40px
+            rgba(255,80,150,.15);
+    }
+
+    50%{
+        box-shadow:
+            0 15px 65px
+            rgba(255,80,150,.45);
+    }
 }
+
+@keyframes memoryIn{
+
+    from{
+        opacity:0;
+
+        transform:
+            translateX(40px)
+            scale(.97);
+    }
+
+    to{
+        opacity:1;
+
+        transform:
+            translateX(0)
+            scale(1);
+    }
+}
+
+.memory-controls{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:25px;
+
+    margin:15px 0;
+}
+
+.memory-controls button{
+
+    width:50px;
+
+    height:50px;
+
+    padding:0;
+
+    margin:0;
+
+    font-size:25px;
+}
+
+#memoryCounter{
+
+    font-weight:bold;
+
+    font-size:17px;
+}
+
+.swipe-hint{
+
+    font-size:14px;
+
+    opacity:.65;
+
+    margin-bottom:20px;
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
 
 .message-card{
+
     max-width:820px;
+
     margin:auto;
-    padding:45px 32px;
-    background:rgba(255,255,255,.8);
-    border-radius:35px;
-    box-shadow:0 20px 60px rgba(0,0,0,.1);
+
+    padding:
+        45px 32px;
+
     text-align:left;
+
+    border-radius:35px;
+
+    background:
+        rgba(255,255,255,.82);
+
+    box-shadow:
+        0 20px 60px
+        rgba(0,0,0,.1);
 }
 
-.message-card h2{text-align:center}
+.message-card h2{
+
+    text-align:center;
+}
 
 .message-card p{
+
     margin:18px 0;
+
     font-size:18px;
 }
 
 .message-end{
+
     text-align:center;
+
     font-size:23px!important;
 }
 
-.final-heart{
-    font-size:85px;
-    animation:heartbeat 1.4s infinite;
+
+/* =========================
+   FINAL CATS
+========================= */
+
+.final-section{
+
+    background:
+        radial-gradient(
+            circle at center,
+            #fff5fa,
+            #ffd8e8,
+            #e7d9ff
+        );
 }
 
+.cats{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-end;
+
+    gap:5px;
+
+    margin:30px auto;
+
+    position:relative;
+
+    height:190px;
+}
+
+.cat-one,
+.cat-two{
+
+    font-size:105px;
+
+    position:relative;
+
+    display:inline-block;
+}
+
+.cat-one{
+
+    animation:
+        catLeft
+        1.8s
+        ease-in-out
+        infinite;
+}
+
+.cat-two{
+
+    animation:
+        catRight
+        1.8s
+        ease-in-out
+        infinite;
+}
+
+@keyframes catLeft{
+
+    0%,100%{
+        transform:
+            translateX(0)
+            rotate(-3deg);
+    }
+
+    50%{
+        transform:
+            translateX(28px)
+            rotate(3deg);
+    }
+}
+
+@keyframes catRight{
+
+    0%,100%{
+        transform:
+            translateX(0)
+            rotate(3deg);
+    }
+
+    50%{
+        transform:
+            translateX(-28px)
+            rotate(-3deg);
+    }
+}
+
+.kiss-heart{
+
+    position:absolute;
+
+    top:5px;
+
+    left:50%;
+
+    transform:
+        translateX(-50%);
+
+    font-size:45px;
+
+    animation:
+        kissHeart
+        1.5s
+        ease-in-out
+        infinite;
+}
+
+@keyframes kissHeart{
+
+    0%,100%{
+        transform:
+            translateX(-50%)
+            translateY(10px)
+            scale(.8);
+
+        opacity:.5;
+    }
+
+    50%{
+        transform:
+            translateX(-50%)
+            translateY(-10px)
+            scale(1.2);
+
+        opacity:1;
+    }
+}
+
+.love-title{
+
+    color:#ff4e8c;
+
+    font-size:
+        clamp(48px,10vw,90px);
+
+    animation:
+        lovePop
+        1.2s
+        ease;
+}
+
+@keyframes lovePop{
+
+    from{
+        transform:scale(.3);
+
+        opacity:0;
+    }
+
+    to{
+        transform:scale(1);
+
+        opacity:1;
+    }
+}
+
+
+/* =========================
+   MUSIC BUTTON
+========================= */
+
 .music-control{
+
     position:fixed;
+
     top:15px;
+
     right:15px;
+
     z-index:100;
+
     margin:0;
-    padding:12px 18px;
+
+    padding:
+        11px 17px;
+
     font-size:14px;
 }
 
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
 .floating{
+
     position:fixed;
+
     bottom:-50px;
+
     pointer-events:none;
+
     z-index:30;
-    animation:floatUp linear forwards;
+
+    animation:
+        floatUp
+        linear
+        forwards;
 }
 
 @keyframes floatUp{
-    from{opacity:1;transform:translateY(0) rotate(0)}
-    to{opacity:0;transform:translateY(-120vh) rotate(360deg)}
+
+    from{
+        opacity:1;
+
+        transform:
+            translateY(0)
+            rotate(0);
+    }
+
+    to{
+        opacity:0;
+
+        transform:
+            translateY(-120vh)
+            rotate(360deg);
+    }
 }
 
+
+/* =========================
+   MOBILE
+========================= */
+
 @media(max-width:600px){
-    .doodle{font-size:35px}
-    p{font-size:17px}
-    .message-card{padding:30px 20px}
-    .memory img{height:210px}
+
+    .doodle{
+        font-size:34px;
+    }
+
+    p{
+        font-size:17px;
+    }
+
+    .virtual-card{
+        padding:35px 18px;
+    }
+
+    .message-card{
+        padding:30px 20px;
+    }
+
+    .memory-slide img{
+        height:65vh;
+    }
+
+    .cat-one,
+    .cat-two{
+        font-size:75px;
+    }
 }
+
 </style>
 </head>
 
+
 <body>
 
-<audio id="bgMusic" loop>
-    <source src="song.mp3" type="audio/mpeg">
+
+<!-- =====================================================
+     BACKGROUND MUSIC
+===================================================== -->
+
+<audio
+    id="bgMusic"
+    loop
+    preload="auto">
+
+    <source
+        src="song.mp3"
+        type="audio/mpeg">
+
 </audio>
 
-<button id="musicButton" class="music-control" onclick="toggleMusic()">
+
+<!-- =====================================================
+     FAHH AUDIO
+===================================================== -->
+
+<audio
+    id="fahAudio"
+    preload="auto">
+
+    <source
+        src="Fahhh.mp3"
+        type="audio/mpeg">
+
+</audio>
+
+
+<!-- =====================================================
+     MUSIC BUTTON
+===================================================== -->
+
+<button
+    id="musicButton"
+    class="music-control"
+    onclick="toggleMusic()">
+
     🎵 Music
+
 </button>
 
 
-<!-- PASSCODE -->
+<!-- =====================================================
+     0. VIRTUAL GIFT INTRO
+===================================================== -->
 
-<section class="screen active" id="passcode">
-<div class="content">
+<section
+    class="screen active"
+    id="virtualGift">
 
-<div class="doodle d1">🌷</div>
-<div class="doodle d2">✨</div>
-<div class="doodle d3">💗</div>
-<div class="doodle d4">🎀</div>
+    <div class="content">
 
-<div class="lock">🔐</div>
+        <div class="doodle d1">🌷</div>
+        <div class="doodle d2">✨</div>
+        <div class="doodle d3">💗</div>
+        <div class="doodle d4">🎀</div>
 
-<p>This little world is just for you... 👀</p>
 
-<h2>Enter the secret code</h2>
+        <div class="virtual-card">
 
-<p>Psst... you should know this one. 🤭</p>
+            <div class="cat">
+                🐱
+            </div>
 
-<input
-id="passcodeInput"
-class="code-box"
-type="password"
-maxlength="2"
-inputmode="numeric"
-placeholder="••"
->
 
-<br>
+            <p>
+                I can't give you a gift
+                or surprise you in person...
+            </p>
 
-<button onclick="checkPassword()">Unlock 💗</button>
 
-<div id="errorMessage" class="error"></div>
+            <h1 class="virtual-title">
+                So this is my<br>
+                Virtual Gift for you 💗
+            </h1>
 
-</div>
+
+            <div class="gift-box">
+                🎁
+            </div>
+
+
+            <p>
+                I made this little world
+                just for you. 🥹🫶🏻
+            </p>
+
+
+            <button
+                onclick="openVirtualGift()">
+
+                💗 Open My Gift
+
+            </button>
+
+        </div>
+
+    </div>
+
 </section>
 
 
-<!-- OPENING -->
+<!-- =====================================================
+     1. PASSWORD
+===================================================== -->
 
-<section class="screen" id="screen1">
-<div class="content">
+<section
+    class="screen"
+    id="passcode">
 
-<div class="doodle d1">👀</div>
-<div class="doodle d2">💌</div>
-<div class="doodle d3">🌸</div>
-<div class="doodle d4">✨</div>
+    <div class="content">
 
-<div class="lock">💗</div>
+        <div class="doodle d1">🌸</div>
+        <div class="doodle d2">🐾</div>
+        <div class="doodle d3">💗</div>
+        <div class="doodle d4">✨</div>
 
-<p>Hey waittt... 👀</p>
 
-<h1>
-I made something<br>
-for you...
-</h1>
+        <div class="lock">
+            🔐
+        </div>
 
-<p>Do you really wanna see it?</p>
 
-<button onclick="yesFirst()">YES 💗</button>
-<button class="no-btn" onclick="noFirst()">NO 😒</button>
+        <h2>
+            One tiny secret first... 👀
+        </h2>
 
-</div>
+
+        <p>
+            Enter the password.
+            <br>
+            Only you should know this one. 🤭
+        </p>
+
+
+        <input
+            id="passcodeInput"
+            class="code-box"
+            type="password"
+            maxlength="2"
+            inputmode="numeric"
+            placeholder="••"
+        >
+
+
+        <button onclick="checkPassword()">
+
+            Unlock 💗
+
+        </button>
+
+
+        <div
+            id="errorMessage"
+            class="error">
+
+        </div>
+
+    </div>
+
 </section>
 
 
-<!-- NO -->
+<!-- =====================================================
+     2. OPENING
+===================================================== -->
 
-<section class="screen" id="noScreen">
-<div class="content">
+<section
+    class="screen"
+    id="screen1">
 
-<h1>WHATTT?! 😭</h1>
+    <div class="content">
 
-<p>
-You said NO?!<br><br>
-Fine... I'll kill you. 🙂😂<br><br>
-Now choose properly. 😌
-</p>
+        <div class="doodle d1">👀</div>
+        <div class="doodle d2">💌</div>
+        <div class="doodle d3">🌷</div>
+        <div class="doodle d4">✨</div>
 
-<button onclick="nextScreen('screen1')">
-Okay okay, YES 😭💗
-</button>
 
-</div>
+        <p>
+            Hey waittt... 👀
+        </p>
+
+
+        <h1>
+            I made something<br>
+            for you...
+        </h1>
+
+
+        <p>
+            Do you really wanna see it?
+        </p>
+
+
+        <button onclick="nextScreen('reallyScreen')">
+            YES 💗
+        </button>
+
+
+        <button
+            class="no-btn"
+            onclick="nextScreen('noScreen')">
+
+            NO 😒
+
+        </button>
+
+    </div>
+
 </section>
 
 
-<!-- REALLY -->
+<!-- =====================================================
+     3. NO
+===================================================== -->
 
-<section class="screen" id="reallyScreen">
-<div class="content">
+<section
+    class="screen"
+    id="noScreen">
 
-<div class="doodle d1">👀</div>
-<div class="doodle d2">🤭</div>
+    <div class="content">
 
-<h2>Ohhh really? 👀</h2>
+        <h1>
+            WHATTT?! 😭
+        </h1>
 
-<p>
-You REALLY wanna know?<br>
-Like... REALLY REALLY? 😭
-</p>
 
-<button onclick="nextScreen('really2')">
-YESSS 😭
-</button>
+        <p>
 
-<button class="no-btn" onclick="nextScreen('screen1')">
-Wait... 🤭
-</button>
+            You said NO?!
+            <br><br>
 
-</div>
+            Fine... I'll kill you. 🙂😂
+            <br><br>
+
+            Now choose properly. 😌
+
+        </p>
+
+
+        <button onclick="nextScreen('screen1')">
+
+            Okay okay, YES 😭💗
+
+        </button>
+
+    </div>
+
 </section>
 
 
-<!-- REALLY 2 -->
+<!-- =====================================================
+     4. REALLY
+===================================================== -->
 
-<section class="screen" id="really2">
-<div class="content">
+<section
+    class="screen"
+    id="reallyScreen">
 
-<h2>Okay then... 👀</h2>
+    <div class="content">
 
-<p>
-Don't blame me after this. 😭<br><br>
-One step ahead...
-</p>
+        <div class="doodle d1">👀</div>
+        <div class="doodle d2">🤭</div>
 
-<button onclick="nextScreen('step1')">
-One step ahead → 💗
-</button>
 
-</div>
+        <h2>
+            Ohhh really? 👀
+        </h2>
+
+
+        <p>
+
+            You REALLY wanna know?
+            <br>
+
+            Like... REALLY REALLY? 😭
+
+        </p>
+
+
+        <button
+            onclick="nextScreen('really2')">
+
+            YESSS 😭
+
+        </button>
+
+
+        <button
+            class="no-btn"
+            onclick="nextScreen('screen1')">
+
+            Wait... 🤭
+
+        </button>
+
+    </div>
+
 </section>
 
 
-<!-- STEP 1 -->
+<!-- =====================================================
+     5. REALLY 2
+===================================================== -->
 
-<section class="screen" id="step1">
-<div class="content">
+<section
+    class="screen"
+    id="really2">
 
-<h2>Are you really ready? 👀</h2>
+    <div class="content">
 
-<p>
-Think carefully...<br>
-Once you continue, there is no going back. 😭
-</p>
+        <h2>
+            Okay then... 👀
+        </h2>
 
-<button onclick="nextScreen('step2')">
-I'm ready 💗
-</button>
 
-</div>
+        <p>
+
+            Don't blame me after this. 😭
+            <br><br>
+
+            One step ahead...
+
+        </p>
+
+
+        <button
+            onclick="nextScreen('step1')">
+
+            One step ahead → 💗
+
+        </button>
+
+    </div>
+
 </section>
 
 
-<!-- STEP 2 -->
+<!-- =====================================================
+     6. STEP 1
+===================================================== -->
 
-<section class="screen" id="step2">
-<div class="content">
+<section
+    class="screen"
+    id="step1">
 
-<h2>Are you REALLY sure? 😭</h2>
+    <div class="content">
 
-<p>Because this is your last warning. 👀</p>
+        <h2>
+            Are you really ready? 👀
+        </h2>
 
-<button onclick="nextScreen('step3')">
-Click here 💗
-</button>
 
-</div>
+        <p>
+
+            Think carefully...
+            <br>
+
+            Once you continue,
+            there is no going back. 😭
+
+        </p>
+
+
+        <button
+            onclick="nextScreen('step2')">
+
+            I'm ready 💗
+
+        </button>
+
+    </div>
+
 </section>
 
 
-<!-- STEP 3 -->
+<!-- =====================================================
+     7. STEP 2
+===================================================== -->
 
-<section class="screen" id="step3">
-<div class="content">
+<section
+    class="screen"
+    id="step2">
 
-<h2>Do you REALLY wanna see this?</h2>
+    <div class="content">
 
-<p>No turning back now. 🤭</p>
+        <h2>
+            Are you REALLY sure? 😭
+        </h2>
 
-<button onclick="birthdayReveal()">
-YESSSS 😭💗
-</button>
 
-</div>
+        <p>
+            Because this is your last warning. 👀
+        </p>
+
+
+        <button
+            onclick="nextScreen('step3')">
+
+            Click here 💗
+
+        </button>
+
+    </div>
+
 </section>
 
 
-<!-- BIRTHDAY -->
+<!-- =====================================================
+     8. STEP 3
+===================================================== -->
 
-<section class="screen" id="birthday">
-<div class="content">
+<section
+    class="screen"
+    id="step3">
 
-<div class="doodle d1">🎈</div>
-<div class="doodle d2">🎀</div>
-<div class="doodle d3">🎂</div>
-<div class="doodle d4">✨</div>
+    <div class="content">
 
-<div style="font-size:90px">🎂</div>
+        <h2>
+            Do you REALLY wanna see this?
+        </h2>
 
-<p>It's really a special day... ✨</p>
 
-<div class="date">25 AUGUST</div>
+        <p>
+            No turning back now. 🤭
+        </p>
 
-<h1 class="birthday-title">
-HAPPIEST BIRTHDAY<br>
-TANVITHAAA! 💗
-</h1>
 
-<p>🎉 🎀 🥹 🎈 ✨</p>
+        <button
+            onclick="birthdayReveal()">
 
-<button onclick="nextScreen('dedicated')">
-Continue → 💌
-</button>
+            YESSSS 😭💗
 
-</div>
+        </button>
+
+    </div>
+
 </section>
 
 
-<!-- DEDICATED SONG -->
+<!-- =====================================================
+     9. BIRTHDAY
+===================================================== -->
 
-<section class="screen" id="dedicated">
-<div class="content">
+<section
+    class="screen"
+    id="birthday">
 
-<div class="doodle d1">🎧</div>
-<div class="doodle d2">🎵</div>
-<div class="doodle d3">💗</div>
-<div class="doodle d4">✨</div>
+    <div class="content">
 
-<h2>A little something for you... 🎀</h2>
+        <div class="doodle d1">🎈</div>
+        <div class="doodle d2">🎀</div>
+        <div class="doodle d3">🎂</div>
+        <div class="doodle d4">✨</div>
 
-<p>
-This song is dedicated to you, Thanu. 🥹❤️<br><br>
-I don't know if a song can say everything I can't...
-but I hope you feel what I mean when you hear it. 🫂✨
-</p>
 
-<div class="video-card">
-<video id="dedicatedVideo" controls playsinline>
-<source src="song.mp4" type="video/mp4">
-</video>
-</div>
+        <div style="font-size:90px">
+            🎂
+        </div>
 
-<button onclick="nextScreen('hype')">
-One more thing... 👀
-</button>
 
-</div>
+        <p>
+            It's really a special day... ✨
+        </p>
+
+
+        <div class="date">
+            25 AUGUST
+        </div>
+
+
+        <h1 class="birthday-title">
+
+            HAPPIEST BIRTHDAY
+            <br>
+
+            TANVITHAAA! 💗
+
+        </h1>
+
+
+        <p>
+            🎉 🎀 🥹 🎈 ✨
+        </p>
+
+
+        <button
+            onclick="nextScreen('dedicated')">
+
+            Continue → 🎵
+
+        </button>
+
+    </div>
+
 </section>
 
 
-<!-- HYPE -->
+<!-- =====================================================
+     10. DEDICATED SONG
+===================================================== -->
 
-<section class="screen" id="hype">
-<div class="content">
+<section
+    class="screen"
+    id="dedicated">
 
-<div class="doodle d1">👀</div>
-<div class="doodle d2">✨</div>
+    <div class="content">
 
-<h2>I found a beautiful lady...</h2>
+        <div class="doodle d1">🎵</div>
+        <div class="doodle d2">💗</div>
+        <div class="doodle d3">🎧</div>
+        <div class="doodle d4">🐱</div>
 
-<p style="font-size:25px">in this world... 👀</p>
 
-<p style="font-size:24px;margin-top:25px">
-And apparently...
-</p>
+        <div class="song-card">
 
-<button onclick="nextScreen('comedy')">
-I think I found her → 😭
-</button>
+            <div class="song-cat">
+                🐱🎧🐱
+            </div>
 
-</div>
+
+            <h2 class="song-title">
+
+                A Song Dedicated To You 💗
+
+            </h2>
+
+
+            <p class="song-note">
+
+                This one is for you, Thanu.
+                <br>
+
+                Please listen to it fully...
+                🥹❤️
+
+            </p>
+
+
+            <audio
+                id="dedicatedSong"
+                controls
+                preload="auto">
+
+                <source
+                    src="song.mp4"
+                    type="video/mp4">
+
+            </audio>
+
+
+            <p
+                id="songStatus"
+                style="
+                    margin-top:15px;
+                    font-size:15px;
+                    color:#c45c86;
+                ">
+
+                🎵 Playing your song...
+
+            </p>
+
+
+            <button
+                id="songNextButton"
+                onclick="trySongNext()">
+
+                Next → 💗
+
+            </button>
+
+        </div>
+
+    </div>
+
 </section>
 
 
-<!-- COMEDY -->
+<!-- =====================================================
+     SONG WARNING
+===================================================== -->
 
-<section class="screen" id="comedy">
-<div class="content">
+<div
+    id="songWarning"
+    class="warning-overlay">
 
-<div class="doodle d1">😂</div>
-<div class="doodle d2">💀</div>
+    <div class="warning-card">
 
-<h2>And here she is... 👀</h2>
+        <div class="warning-icon">
+            ⚠️
+        </div>
 
-<img src="comedy.jpg"
-class="comedy-img"
-alt="Funny Tanvitha picture">
 
-<div class="fah">FAHHHHHHHHH 😭😂</div>
+        <h2>
+            Waittt! 🥺
+        </h2>
 
-<p>
-Okay okay... maybe "beautiful" was a little ambitious. 💀😂
-</p>
 
-<audio id="fahAudio">
-<source src="Fahhh.mp3" type="audio/mpeg">
-</audio>
+        <p>
 
-<button onclick="playFah()">🔊 Play FAHHHH</button>
+            This song is dedicated
+            especially to you. 💗
 
-<br>
+            <br><br>
 
-<button onclick="nextScreen('memories')">
-Okay enough bullying 😭
-</button>
+            Please listen to it fully
+            before clicking Next.
+
+            <br><br>
+
+            I really want you to hear
+            every little bit of it. 🫂
+
+        </p>
+
+
+        <button
+            onclick="closeWarning()">
+
+            Okayyy, I'll listen fully 💗
+
+        </button>
+
+    </div>
 
 </div>
+
+
+<!-- =====================================================
+     11. HYPE
+===================================================== -->
+
+<section
+    class="screen"
+    id="hype">
+
+    <div class="content">
+
+        <div class="doodle d1">👀</div>
+        <div class="doodle d2">✨</div>
+
+
+        <h2>
+            I found a beautiful lady...
+        </h2>
+
+
+        <p style="font-size:25px">
+
+            in this world... 👀
+
+        </p>
+
+
+        <p
+            style="
+                font-size:23px;
+                margin-top:20px;
+            ">
+
+            And apparently...
+
+        </p>
+
+
+        <button
+            onclick="nextScreen('comedy')">
+
+            I think I found her → 😭
+
+        </button>
+
+    </div>
+
 </section>
 
 
-<!-- MEMORIES -->
+<!-- =====================================================
+     12. COMEDY
+===================================================== -->
 
-<section class="screen" id="memories">
-<div class="content">
+<section
+    class="screen"
+    id="comedy">
 
-<div class="doodle d1">📸</div>
-<div class="doodle d2">🌷</div>
-<div class="doodle d3">💗</div>
-<div class="doodle d4">✨</div>
+    <div class="content">
 
-<h2>Our Little Memories 📸💗</h2>
+        <div class="doodle d1">😂</div>
+        <div class="doodle d2">💀</div>
 
-<p>
-Some moments are small...<br>
-but somehow they become our favourite memories. 🥹
-</p>
 
-<div class="memory-grid">
+        <h2>
+            And here she is... 👀
+        </h2>
 
-<div class="memory">
-<img src="photo1.jpg">
-<p>One of those moments I'll always remember. 🫶🏻</p>
-</div>
 
-<div class="memory">
-<img src="photo2.jpg">
-<p>The kind of memory that makes me smile. 🥹</p>
-</div>
+        <img
+            src="comedy.jpg"
+            class="comedy-img"
+            alt="Funny picture">
 
-<div class="memory">
-<img src="photo3.jpg">
-<p>Us being completely crazy. 😂</p>
-</div>
 
-<div class="memory">
-<img src="photo4.jpg">
-<p>Another little piece of our story. 💗</p>
-</div>
+        <div class="fah">
+            FAHHHHHHHHH 😭😂
+        </div>
 
-<div class="memory">
-<img src="photo5.jpg">
-<p>A memory worth keeping forever. 🌷</p>
-</div>
 
-<div class="memory">
-<img src="photo6.jpg">
-<p>One more little moment with you. 🫂</p>
-</div>
+        <p>
 
-<div class="memory">
-<img src="photo7.jpg">
-<p>Still makes me smile every time. 😭💗</p>
-</div>
+            Okay okay...
+            maybe "beautiful"
+            was a little ambitious. 💀😂
 
-<div class="memory">
-<img src="photo8.jpg">
-<p>Our kind of chaos. 😂🫶🏻</p>
-</div>
+        </p>
 
-<div class="memory">
-<img src="photo9.jpg">
-<p>A tiny moment that became a memory. ✨</p>
-</div>
 
-<div class="memory favorite">
+        <button onclick="playFah()">
 
-<div style="font-size:45px">💗✨💗</div>
+            🔊 FAHHHH
 
-<img src="photo10.jpg">
+        </button>
 
-<div class="favorite-label">
-MY FAVOURITE OF ALL TIME 🥹❤️
-</div>
 
-<p>
-Some pictures just feel a little more special. 🫶🏻
-</p>
+        <br>
 
-</div>
 
-<div class="memory">
-<img src="photo11.jpg">
-<p>And another one I'll keep forever. 💗</p>
-</div>
+        <button
+            onclick="nextScreen('memories')">
 
-<div class="memory">
-<img src="photo12.jpg">
-<p>And many more memories waiting for us... ♾️</p>
-</div>
+            Okay enough bullying 😭
 
-</div>
+        </button>
 
-<br>
+    </div>
 
-<button onclick="nextScreen('message')">
-There's one last message... 💌
-</button>
-
-</div>
 </section>
 
 
-<!-- MESSAGE -->
+<!-- =====================================================
+     13. MEMORIES
+===================================================== -->
 
-<section class="screen" id="message">
-<div class="content">
+<section
+    class="screen"
+    id="memories">
 
-<div class="doodle d1">💌</div>
-<div class="doodle d2">🌷</div>
-<div class="doodle d3">💗</div>
-<div class="doodle d4">✨</div>
+    <div class="content">
 
-<div class="message-card">
+        <div class="doodle d1">📸</div>
+        <div class="doodle d2">🌷</div>
+        <div class="doodle d3">💗</div>
+        <div class="doodle d4">✨</div>
 
-<h2>A little message from me to you… 💌</h2>
 
-<p>Thanuuu 🥹❤️</p>
+        <h2>
+            Our Little Memories 📸💗
+        </h2>
 
-<p>
-Nijam cheppali ante, mana madhya konni misunderstandings valla ochina gap naaku chala baadha anipinchindi. Mundu laga matladukovali anukunna ah rapo ravatledu, everything felt a little different… and honestly, I missed you more than I ever said. 🥲
-</p>
 
-<p>
-But ippudu malli manam matladukuntunnam kada… that genuinely makes me happy. 🫂❤️ Maybe everything isn't exactly like before yet, but I'm just thankful that somehow, we found our way back to each other.
-</p>
+        <p>
 
-<p>
-Naaku chala mandi friends unnaru, but you are different in a way I can't really explain. Some people become a part of your life without you even realising how important they've become… nuvvu ala na life lo oka person ayipoyavvv 🥹🫶🏻
-</p>
+            Swipe through them...
+            <br>
 
-<p>
-Nenu literally words lo cheppalekapothunna how much I love you 😭❤️ Sometimes I wish I could just make you understand everything I feel without actually having to say it, because I don't think words will ever be enough.
-</p>
+            one memory at a time. 🥹
 
-<p>
-Konni saarlu nee gurinchi or nee special moments gurinchi think chesthe, literally “ippudu nenu thana pakkana unte bagundedhi” ani anipisthundi. 🥺
-</p>
+        </p>
 
-<p>
-I wish I could be there beside you to celebrate your happiness with you, listen to your random stories, laugh at the stupidest things with you, irritate you for absolutely no reason 😂, and just sit beside you even when there is nothing to say 🫂…
-</p>
 
-<p>
-Maybe not this time… But definitely later. ❤️
-</p>
+        <div class="memory-slider">
 
-<p>
-One day, I want to be there for the moments that actually matter. Random ordinary days aina, somehow I just want to be there. I don't know exactly what the future looks like, but I'll always be ready to show up for you 🥹✨ (Konchem ekkuva ainattundemoo😉, kaani I'm really missing those gossips, malli andari meedha comment cheskuntu iddaram kalisi chill ayye time yeppudu vasthundoo 🙄😒)
-</p>
 
-<p>
-And you know what I love the most?
-</p>
+            <div class="memory-slide active">
 
-<p>
-Mana bond lo unna aa little things. The random talks, unnecessary arguments, stupid jokes, laughing until our stomachs hurt, and those conversations that start with something completely random and somehow go on forever. 😭😂
-</p>
+                <img src="photo1.jpg">
 
-<p>
-Even the quiet moments, the awkward phases, the gaps… somehow they all became part of our story. And maybe that's what makes it ours. 🥹❤️
-</p>
+                <p>
+                    One of those moments
+                    I'll always remember. 🫶🏻
+                </p>
 
-<p>
-Sometimes I think about how different everything would have been if we had never met… and honestly, I don't even want to imagine that. 🫂
-</p>
+            </div>
 
-<p>
-You have given me so many memories that I'll randomly remember years later and smile like an idiot (Especially those random letters 😭💗)
-</p>
 
-<p>
-And maybe I don't always show it properly, No matter how many people come into my life, you'll always have your own little corner in my heart. 🫶🏻♾️
-</p>
+            <div class="memory-slide">
 
-<p>
-So on your birthday, I just want you to know—
-</p>
+                <img src="photo2.jpg">
 
-<p>
-I'm really, really glad that I met you.
-</p>
+                <p>
+                    The kind of memory
+                    that makes me smile. 🥹
+                </p>
 
-<p>
-I'm glad that you became my person.
-</p>
+            </div>
 
-<p>
-And I'm even more glad that, after everything, we're talking again. 🥹❤️
-</p>
 
-<p class="message-end">
-Happiest Birthday, Tanvithaaa 🎂🎀💗
-</p>
+            <div class="memory-slide">
 
-<p>
-I hope this year gives you the kind of happiness that stays, the kind of people who choose you, and all the little things you've secretly wished for. ✨
-</p>
+                <img src="photo3.jpg">
 
-<p>
-And hopefully someday, we'll sit together, look back at everything, laugh about all the stupid things we did, and say…
-</p>
+                <p>
+                    Us being completely crazy. 😂
+                </p>
 
-<p class="message-end">
-“Arey, manam intha over ga enduku unde vallam?” 😭😂
-</p>
+            </div>
 
-<p>
-Until then, keep being the same crazy, cute, annoying, beautiful you. 😂🫶🏻
-</p>
 
-<p class="message-end">
-Love youuu so muchhh, Thanu. 🫂❤️
-</p>
+            <div class="memory-slide">
 
-<p class="message-end">
-And whatever happens, I'll always be somewhere in your corner, cheering for you. 🌷♾️
-</p>
+                <img src="photo4.jpg">
 
-</div>
+                <p>
+                    Another little piece
+                    of our story. 💗
+                </p>
 
-<br><br>
+            </div>
 
-<button onclick="nextScreen('final')">
-One last thing... 💗
-</button>
 
-</div>
+            <div class="memory-slide">
+
+                <img src="photo5.jpg">
+
+                <p>
+                    A memory worth
+                    keeping forever. 🌷
+                </p>
+
+            </div>
+
+
+            <div class="memory-slide">
+
+                <img src="photo6.jpg">
+
+                <p>
+                    One more little moment
+                    with you. 🫂
+                </p>
+
+            </div>
+
+
+            <div class="memory-slide">
+
+                <img src="photo7.jpg">
+
+                <p>
+                    Still makes me smile
+                    every time. 😭💗
+                </p>
+
+            </div>
+
+
+            <div class="memory-slide">
+
+                <img src="photo8.jpg">
+
+                <p>
+                    Our kind of chaos. 😂🫶🏻
+                </p>
+
+            </div>
+
+
+            <div class="memory-slide">
+
+                <img src="photo9.jpg">
+
+                <p>
+                    A tiny moment
+                    that became a memory. ✨
+                </p>
+
+            </div>
+
+
+            <div
+                class="memory-slide favorite-slide">
+
+                <div class="favorite-top">
+
+                    💗✨
+                    MY FAVOURITE OF ALL TIME
+                    ✨💗
+
+                </div>
+
+
+                <img src="photo10.jpg">
+
+
+                <p>
+                    Some pictures just feel
+                    a little more special. 🥹❤️
+                </p>
+
+            </div>
+
+
+            <div class="memory-slide">
+
+                <img src="photo11.jpg">
+
+                <p>
+                    And another one
+                    I'll keep forever. 💗
+                </p>
+
+            </div>
+
+
+            <div class="memory-slide">
+
+                <img src="photo12.jpg">
+
+                <p>
+                    And many more memories
+                    waiting for us... ♾️
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="memory-controls">
+
+            <button
+                onclick="previousMemory()">
+
+                ←
+
+            </button>
+
+
+            <span id="memoryCounter">
+                1 / 12
+            </span>
+
+
+            <button
+                onclick="nextMemory()">
+
+                →
+
+            </button>
+
+        </div>
+
+
+        <p class="swipe-hint">
+            ← swipe to see our memories →
+        </p>
+
+
+        <button
+            onclick="nextScreen('message')">
+
+            There's one last message... 💌
+
+        </button>
+
+    </div>
+
 </section>
 
 
-<!-- FINAL -->
+<!-- =====================================================
+     14. MESSAGE
+===================================================== -->
 
-<section class="screen" id="final">
-<div class="content">
+<section
+    class="screen"
+    id="message">
 
-<div class="doodle d1">🌷</div>
-<div class="doodle d2">🎀</div>
-<div class="doodle d3">💗</div>
-<div class="doodle d4">✨</div>
+    <div class="content">
 
-<div class="final-heart">💗</div>
+        <div class="doodle d1">💌</div>
+        <div class="doodle d2">🌷</div>
+        <div class="doodle d3">💗</div>
+        <div class="doodle d4">✨</div>
 
-<h1>
-Happy Birthday,<br>
-Tanvithaaa! 🎂
-</h1>
 
-<p>
-Here's to more gossips,<br>
-more laughs,<br>
-more chaos,<br>
-more memories...
-<br><br>
-and hopefully many more years of us. 🫂❤️
-</p>
+        <div class="message-card">
 
-<p style="margin-top:30px;font-size:25px">
-Always rooting for you. 🌷♾️
-</p>
+            <h2>
+                A little message from me to you… 💌
+            </h2>
 
-</div>
+
+            <p>
+                Thanuuu 🥹❤️
+            </p>
+
+
+            <p>
+                Nijam cheppali ante, mana madhya konni
+                misunderstandings valla ochina gap naaku
+                chala baadha anipinchindi. Mundu laga
+                matladukovali anukunna ah rapo ravatledu,
+                everything felt a little different…
+                and honestly, I missed you more than I ever said. 🥲
+            </p>
+
+
+            <p>
+                But ippudu malli manam matladukuntunnam kada…
+                that genuinely makes me happy. 🫂❤️
+                Maybe everything isn't exactly like before yet,
+                but I'm just thankful that somehow,
+                we found our way back to each other.
+            </p>
+
+
+            <p>
+                Naaku chala mandi friends unnaru,
+                but you are different in a way I can't
+                really explain. Some people become a part
+                of your life without you even realising
+                how important they've become…
+                nuvvu ala na life lo oka person ayipoyavvv 🥹🫶🏻
+            </p>
+
+
+            <p>
+                Nenu literally words lo cheppalekapothunna
+                how much I love you 😭❤️ Sometimes I wish
+                I could just make you understand everything
+                I feel without actually having to say it,
+                because I don't think words will ever be enough.
+            </p>
+
+
+            <p>
+                Konni saarlu nee gurinchi or nee special
+                moments gurinchi think chesthe,
+                literally “ippudu nenu thana pakkana unte
+                bagundedhi” ani anipisthundi. 🥺
+            </p>
+
+
+            <p>
+                I wish I could be there beside you to
+                celebrate your happiness with you,
+                listen to your random stories,
+                laugh at the stupidest things with you,
+                irritate you for absolutely no reason 😂,
+                and just sit beside you even when there
+                is nothing to say 🫂…
+            </p>
+
+
+            <p>
+                Maybe not this time… But definitely later. ❤️
+            </p>
+
+
+            <p>
+                One day, I want to be there for the moments
+                that actually matter. Random ordinary days aina,
+                somehow I just want to be there. I don't know
+                exactly what the future looks like,
+                but I'll always be ready to show up for you 🥹✨
+                (Konchem ekkuva ainattundemoo😉,
+                kaani I'm really missing those gossips,
+                malli andari meedha comment cheskuntu iddaram
+                kalisi chill ayye time yeppudu vasthundoo 🙄😒)
+            </p>
+
+
+            <p>
+                And you know what I love the most?
+            </p>
+
+
+            <p>
+                Mana bond lo unna aa little things.
+                The random talks, unnecessary arguments,
+                stupid jokes, laughing until our stomachs hurt,
+                and those conversations that start with something
+                completely random and somehow go on forever. 😭😂
+            </p>
+
+
+            <p>
+                Even the quiet moments, the awkward phases,
+                the gaps… somehow they all became part of
+                our story. And maybe that's what makes it ours. 🥹❤️
+            </p>
+
+
+            <p>
+                Sometimes I think about how different
+                everything would have been if we had never met…
+                and honestly, I don't even want to imagine that. 🫂
+            </p>
+
+
+            <p>
+                You have given me so many memories that I'll
+                randomly remember years later and smile like
+                an idiot (Especially those random letters 😭💗)
+            </p>
+
+
+            <p>
+                And maybe I don't always show it properly,
+                No matter how many people come into my life,
+                you'll always have your own little corner
+                in my heart. 🫶🏻♾️
+            </p>
+
+
+            <p>
+                So on your birthday, I just want you to know—
+            </p>
+
+
+            <p>
+                I'm really, really glad that I met you.
+            </p>
+
+
+            <p>
+                I'm glad that you became my person.
+            </p>
+
+
+            <p>
+                And I'm even more glad that, after everything,
+                we're talking again. 🥹❤️
+            </p>
+
+
+            <p class="message-end">
+                Happiest Birthday, Tanvithaaa 🎂🎀💗
+            </p>
+
+
+            <p>
+                I hope this year gives you the kind of happiness
+                that stays, the kind of people who choose you,
+                and all the little things you've secretly wished for. ✨
+            </p>
+
+
+            <p>
+                And hopefully someday, we'll sit together,
+                look back at everything, laugh about all the
+                stupid things we did, and say…
+            </p>
+
+
+            <p class="message-end">
+                “Arey, manam intha over ga enduku unde vallam?” 😭😂
+            </p>
+
+
+            <p>
+                Until then, keep being the same crazy,
+                cute, annoying, beautiful you. 😂🫶🏻
+            </p>
+
+
+            <p class="message-end">
+                Love youuu so muchhh, Thanu. 🫂❤️
+            </p>
+
+
+            <p class="message-end">
+                And whatever happens, I'll always be somewhere
+                in your corner, cheering for you. 🌷♾️
+            </p>
+
+        </div>
+
+
+        <button
+            onclick="nextScreen('final')">
+
+            One last thing... 💗
+
+        </button>
+
+    </div>
+
 </section>
+
+
+<!-- =====================================================
+     15. FINAL
+===================================================== -->
+
+<section
+    class="screen final-section"
+    id="final">
+
+    <div class="content">
+
+        <div class="doodle d1">💗</div>
+        <div class="doodle d2">✨</div>
+        <div class="doodle d3">🌷</div>
+        <div class="doodle d4">🎀</div>
+
+
+        <h1 class="love-title">
+            LOVE YOUUU 💗
+        </h1>
+
+
+        <p>
+            And now...
+            one last little surprise. 🥹
+        </p>
+
+
+        <div class="cats">
+
+            <div class="kiss-heart">
+                💕
+            </div>
+
+
+            <div class="cat-one">
+                🐱
+            </div>
+
+
+            <div class="cat-two">
+                🐱
+            </div>
+
+        </div>
+
+
+        <p
+            style="
+                font-size:25px;
+                font-weight:bold;
+            ">
+
+            mwahhh 💋💗
+
+        </p>
+
+
+        <p>
+
+            Two silly little cats,
+            <br>
+
+            just like us sometimes. 😂🫶🏻
+
+        </p>
+
+
+        <p
+            style="
+                margin-top:25px;
+                font-size:24px;
+            ">
+
+            Happy Birthday,
+            Tanvithaaa! 🎂🎀❤️
+
+        </p>
+
+
+        <p
+            style="
+                margin-top:20px;
+                font-size:18px;
+            ">
+
+            Always somewhere in your corner. 🌷♾️
+
+        </p>
+
+    </div>
+
+</section>
+
 
 
 <script>
 
-let attempts=0;
+/* =====================================================
+   AUDIO
+===================================================== */
+
+const bgMusic =
+    document.getElementById("bgMusic");
+
+const fahAudio =
+    document.getElementById("fahAudio");
+
+const musicButton =
+    document.getElementById("musicButton");
+
+const dedicatedSong =
+    document.getElementById("dedicatedSong");
+
+
+/* =====================================================
+   BACKGROUND MUSIC
+===================================================== */
+
+function startBackgroundMusic(){
+
+    bgMusic.volume = .35;
+
+    bgMusic.play().catch(()=>{
+
+        console.log(
+            "Browser waiting for user interaction."
+        );
+
+    });
+
+    musicButton.innerHTML =
+        "🎵 Music On";
+}
+
+
+function toggleMusic(){
+
+    if(bgMusic.paused){
+
+        bgMusic.volume=.35;
+
+        bgMusic.play();
+
+        musicButton.innerHTML =
+            "🎵 Music On";
+
+    }else{
+
+        bgMusic.pause();
+
+        musicButton.innerHTML =
+            "🔇 Music Off";
+    }
+}
+
+
+/* =====================================================
+   OPEN VIRTUAL GIFT
+===================================================== */
+
+function openVirtualGift(){
+
+    startBackgroundMusic();
+
+    nextScreen("passcode");
+}
+
+
+/* =====================================================
+   SCREEN NAVIGATION
+===================================================== */
 
 function nextScreen(id){
-    document.querySelectorAll(".screen").forEach(s=>{
-        s.classList.remove("active");
-    });
 
-    const target=document.getElementById(id);
+    document
+        .querySelectorAll(".screen")
+        .forEach(screen=>{
+
+            screen.classList.remove(
+                "active"
+            );
+
+        });
+
+
+    const target =
+        document.getElementById(id);
+
 
     if(target){
-        target.classList.add("active");
+
+        target.classList.add(
+            "active"
+        );
+
     }
 
+
     window.scrollTo({
+
         top:0,
+
         behavior:"smooth"
+
     });
+
+
+    /* AUTO PLAY DEDICATED SONG */
+
+    if(id==="dedicated"){
+
+        startDedicatedSong();
+
+    }
 }
+
+
+/* =====================================================
+   PASSWORD
+===================================================== */
+
+let attempts=0;
+
 
 function checkPassword(){
 
-    const input=document.getElementById("passcodeInput");
-    const error=document.getElementById("errorMessage");
+    const input =
+        document.getElementById(
+            "passcodeInput"
+        );
+
+    const error =
+        document.getElementById(
+            "errorMessage"
+        );
+
 
     if(input.value==="04"){
 
-        error.innerHTML=
-        "🔓 Correct! 🥹❤️<br><br>"+
-        "<span style='font-size:18px'>"+
-        "04 ✨ — 4 years since our friendship began..."+
-        "</span>";
+        error.innerHTML =
+
+            "🔓 Correct! 🥹❤️<br><br>" +
+
+            "<span style='font-size:18px'>" +
+
+            "04 ✨ — 4 years since our friendship began..."
+
+            +
+
+            "</span>";
+
 
         setTimeout(()=>{
+
             nextScreen("screen1");
+
         },1800);
+
 
     }else{
 
         attempts++;
 
+
         if(attempts===1){
 
-            error.innerHTML=
-            "❌ Wrong password!<br>"+
-            "Arey Thanuuu... think again 😭😂<br>"+
-            "Try again.";
+            error.innerHTML =
 
-        }else if(attempts===2){
+                "❌ Password incorrect!<br>" +
 
-            error.innerHTML=
-            "❌ Still wronggg?! 😭<br>"+
-            "Girl, you literally have to know this one! 👀😂<br>"+
-            "Try again.";
+                "Think againnn 😭😂<br>" +
 
-        }else{
-
-            error.innerHTML=
-            "😭 HOW are you getting this wrong?!<br>"+
-            "Try againnn! 😂";
+                "Try again.";
 
         }
+
+        else if(attempts===2){
+
+            error.innerHTML =
+
+                "❌ Still wronggg?! 😭<br>" +
+
+                "You literally should know this! 👀😂<br>" +
+
+                "Try again.";
+
+        }
+
+        else{
+
+            error.innerHTML =
+
+                "😭 HOW ARE YOU STILL GETTING THIS WRONG?!<br>" +
+
+                "Try againnn! 😂";
+
+        }
+
 
         input.value="";
     }
 }
 
-function yesFirst(){
-    nextScreen("reallyScreen");
-}
 
-function noFirst(){
-    nextScreen("noScreen");
-}
+/* =====================================================
+   BIRTHDAY REVEAL
+===================================================== */
 
 function birthdayReveal(){
 
     nextScreen("birthday");
 
-    setTimeout(createFireworks,400);
+    setTimeout(
+        createFireworks,
+        300
+    );
 }
+
+
+/* =====================================================
+   FIREWORKS
+===================================================== */
 
 function createFireworks(){
 
-    const emojis=["🎆","✨","💗","🎉","⭐","💫"];
+    const emojis=[
 
-    for(let burst=0;burst<7;burst++){
+        "🎆",
+        "✨",
+        "💗",
+        "🎉",
+        "⭐",
+        "💫"
+
+    ];
+
+
+    for(
+        let burst=0;
+        burst<7;
+        burst++
+    ){
 
         setTimeout(()=>{
 
-            const x=10+Math.random()*80;
-            const y=15+Math.random()*55;
+            const x=
+                10+
+                Math.random()*80;
 
-            for(let i=0;i<18;i++){
+            const y=
+                15+
+                Math.random()*55;
 
-                const spark=document.createElement("div");
 
-                spark.style.position="fixed";
-                spark.style.left=x+"vw";
-                spark.style.top=y+"vh";
-                spark.style.fontSize="30px";
-                spark.style.zIndex="100";
-                spark.style.pointerEvents="none";
+            for(
+                let i=0;
+                i<18;
+                i++
+            ){
+
+                const spark=
+                    document.createElement(
+                        "div"
+                    );
+
+
+                spark.style.position=
+                    "fixed";
+
+                spark.style.left=
+                    x+"vw";
+
+                spark.style.top=
+                    y+"vh";
+
+                spark.style.fontSize=
+                    "30px";
+
+                spark.style.zIndex=
+                    "100";
+
+                spark.style.pointerEvents=
+                    "none";
+
+
                 spark.innerHTML=
-                    emojis[Math.floor(Math.random()*emojis.length)];
+                    emojis[
+                        Math.floor(
+                            Math.random()*
+                            emojis.length
+                        )
+                    ];
 
-                const angle=Math.random()*Math.PI*2;
-                const distance=60+Math.random()*180;
 
-                spark.animate([
+                const angle=
+                    Math.random()*
+                    Math.PI*2;
+
+                const distance=
+                    60+
+                    Math.random()*180;
+
+
+                spark.animate(
+
+                    [
+
+                        {
+                            opacity:1,
+
+                            transform:
+                                "translate(0,0) scale(.5)"
+                        },
+
+                        {
+                            opacity:0,
+
+                            transform:
+                                `translate(
+                                    ${Math.cos(angle)*distance}px,
+                                    ${Math.sin(angle)*distance}px
+                                )
+                                scale(1.3)`
+                        }
+
+                    ],
+
                     {
-                        opacity:1,
-                        transform:"translate(0,0) scale(.5)"
-                    },
-                    {
-                        opacity:0,
-                        transform:
-                        `translate(${Math.cos(angle)*distance}px,
-                        ${Math.sin(angle)*distance}px)
-                        scale(1.3)`
+                        duration:1400,
+
+                        easing:"ease-out"
                     }
-                ],{
-                    duration:1400,
-                    easing:"ease-out"
-                });
 
-                document.body.appendChild(spark);
+                );
 
-                setTimeout(()=>{
-                    spark.remove();
-                },1500);
+
+                document.body.appendChild(
+                    spark
+                );
+
+
+                setTimeout(
+                    ()=>spark.remove(),
+                    1500
+                );
+
             }
 
         },burst*500);
+
     }
 }
+
+
+/* =====================================================
+   DEDICATED SONG
+===================================================== */
+
+let songFinished=false;
+
+
+function startDedicatedSong(){
+
+    songFinished=false;
+
+
+    const nextButton=
+        document.getElementById(
+            "songNextButton"
+        );
+
+
+    const status=
+        document.getElementById(
+            "songStatus"
+        );
+
+
+    nextButton.disabled=false;
+
+
+    status.innerHTML=
+        "🎵 Please listen to the whole song...";
+
+
+    dedicatedSong.currentTime=0;
+
+
+    /*
+       Because the user has already clicked
+       through many screens, browser autoplay
+       should normally allow this.
+    */
+
+    dedicatedSong.play().catch(()=>{
+
+        status.innerHTML=
+            "🎵 Tap the play button once
+            to start the dedicated song. ❤️";
+
+    });
+
+
+    /* background music pauses */
+
+    bgMusic.pause();
+
+    musicButton.innerHTML=
+        "🎧 Dedicated Song";
+
+}
+
+
+/* =====================================================
+   SONG ENDED
+===================================================== */
+
+dedicatedSong.addEventListener(
+    "ended",
+    ()=>{
+
+        songFinished=true;
+
+
+        const status=
+            document.getElementById(
+                "songStatus"
+            );
+
+
+        const nextButton=
+            document.getElementById(
+                "songNextButton"
+            );
+
+
+        status.innerHTML=
+            "💗 You listened till the end... thank you. 🥹";
+
+
+        nextButton.innerHTML=
+            "Continue → 💗";
+
+
+        nextButton.style.opacity="1";
+
+    }
+);
+
+
+/* =====================================================
+   NEXT BEFORE SONG FINISH
+===================================================== */
+
+function trySongNext(){
+
+    if(!songFinished){
+
+        document
+            .getElementById(
+                "songWarning"
+            )
+            .classList.add(
+                "show"
+            );
+
+        return;
+    }
+
+
+    nextScreen("hype");
+}
+
+
+/* =====================================================
+   CLOSE WARNING
+===================================================== */
+
+function closeWarning(){
+
+    document
+        .getElementById(
+            "songWarning"
+        )
+        .classList.remove(
+            "show"
+        );
+
+
+    /*
+       Resume song automatically
+       if it was paused.
+    */
+
+    if(dedicatedSong.paused){
+
+        dedicatedSong.play().catch(()=>{});
+
+    }
+}
+
+
+/* =====================================================
+   FAHHHH
+===================================================== */
+
+function fadeVolume(
+    audio,
+    target,
+    duration=700
+){
+
+    const start=
+        audio.volume;
+
+    const difference=
+        target-start;
+
+    const steps=25;
+
+    const stepTime=
+        duration/steps;
+
+    let step=0;
+
+
+    const fade=
+        setInterval(()=>{
+
+            step++;
+
+
+            audio.volume=
+                Math.max(
+                    0,
+                    Math.min(
+                        1,
+                        start+
+                        difference*
+                        (step/steps)
+                    )
+                );
+
+
+            if(step>=steps){
+
+                clearInterval(
+                    fade
+                );
+
+            }
+
+        },stepTime);
+}
+
 
 function playFah(){
 
-    const audio=document.getElementById("fahAudio");
+    fadeVolume(
+        bgMusic,
+        .06,
+        700
+    );
 
-    audio.currentTime=0;
-    audio.play();
+
+    fahAudio.currentTime=0;
+
+
+    fahAudio.play().catch(()=>{});
+
+
+    fahAudio.onended=()=>{
+
+        fadeVolume(
+            bgMusic,
+            .35,
+            1000
+        );
+
+    };
 }
 
-const bgMusic=document.getElementById("bgMusic");
-const musicButton=document.getElementById("musicButton");
 
-function startMusic(){
+/* =====================================================
+   MEMORIES
+===================================================== */
 
-    bgMusic.play().then(()=>{
-        musicButton.innerHTML="🎵 Music On";
-    }).catch(()=>{
-        musicButton.innerHTML="🎵 Play Music";
-    });
-}
+let currentMemory=0;
 
-function toggleMusic(){
 
-    if(bgMusic.paused){
-        bgMusic.play();
-        musicButton.innerHTML="🎵 Music On";
-    }else{
-        bgMusic.pause();
-        musicButton.innerHTML="🔇 Music Off";
+const memorySlides=
+    document.querySelectorAll(
+        ".memory-slide"
+    );
+
+
+const memoryCounter=
+    document.getElementById(
+        "memoryCounter"
+    );
+
+
+function showMemory(index){
+
+    if(index<0){
+
+        index=
+            memorySlides.length-1;
+
     }
+
+
+    if(index>=memorySlides.length){
+
+        index=0;
+
+    }
+
+
+    memorySlides.forEach(
+        slide=>{
+
+            slide.classList.remove(
+                "active"
+            );
+
+        }
+    );
+
+
+    memorySlides[index]
+        .classList.add(
+            "active"
+        );
+
+
+    currentMemory=index;
+
+
+    memoryCounter.innerText=
+        `${currentMemory+1} / ${memorySlides.length}`;
 }
 
-const dedicatedVideo=
-document.getElementById("dedicatedVideo");
 
-dedicatedVideo.addEventListener("play",()=>{
-    bgMusic.pause();
-    musicButton.innerHTML="🔇 Music Paused";
-});
+function nextMemory(){
 
-dedicatedVideo.addEventListener("ended",()=>{
-    bgMusic.play();
-    musicButton.innerHTML="🎵 Music On";
-});
+    showMemory(
+        currentMemory+1
+    );
+}
+
+
+function previousMemory(){
+
+    showMemory(
+        currentMemory-1
+    );
+}
+
+
+/* =====================================================
+   SWIPE
+===================================================== */
+
+let touchStartX=0;
+
+let touchEndX=0;
+
+
+const memorySlider=
+    document.querySelector(
+        ".memory-slider"
+    );
+
+
+memorySlider.addEventListener(
+    "touchstart",
+    event=>{
+
+        touchStartX=
+            event.changedTouches[0]
+                .screenX;
+
+    },
+    {passive:true}
+);
+
+
+memorySlider.addEventListener(
+    "touchend",
+    event=>{
+
+        touchEndX=
+            event.changedTouches[0]
+                .screenX;
+
+
+        const difference=
+            touchEndX-touchStartX;
+
+
+        if(Math.abs(difference)>50){
+
+            if(difference<0){
+
+                nextMemory();
+
+            }else{
+
+                previousMemory();
+
+            }
+
+        }
+
+    },
+    {passive:true}
+);
+
+
+/* =====================================================
+   KEYBOARD MEMORY
+===================================================== */
+
+document.addEventListener(
+    "keydown",
+    event=>{
+
+        const memories=
+            document.getElementById(
+                "memories"
+            );
+
+
+        if(
+            memories.classList.contains(
+                "active"
+            )
+        ){
+
+            if(event.key==="ArrowLeft"){
+
+                previousMemory();
+
+            }
+
+            if(event.key==="ArrowRight"){
+
+                nextMemory();
+
+            }
+
+        }
+
+    }
+);
+
+
+/* =====================================================
+   FLOATING HEARTS
+===================================================== */
 
 function createFloatingHeart(){
 
-    const heart=document.createElement("div");
+    const heart=
+        document.createElement(
+            "div"
+        );
 
-    heart.className="floating";
+
+    heart.className=
+        "floating";
+
 
     const choices=[
-        "💗","💕","💖","💓","🌷","✨","🎀"
+
+        "💗",
+        "💕",
+        "💖",
+        "💓",
+        "🌷",
+        "✨",
+        "🎀",
+        "🐾"
+
     ];
 
+
     heart.innerHTML=
-        choices[Math.floor(Math.random()*choices.length)];
+        choices[
+            Math.floor(
+                Math.random()*
+                choices.length
+            )
+        ];
+
 
     heart.style.left=
-        Math.random()*100+"vw";
+        Math.random()*100+
+        "vw";
+
 
     heart.style.fontSize=
-        18+Math.random()*20+"px";
+        18+
+        Math.random()*20+
+        "px";
+
 
     heart.style.animationDuration=
-        5+Math.random()*5+"s";
+        5+
+        Math.random()*5+
+        "s";
 
-    document.body.appendChild(heart);
 
-    setTimeout(()=>{
-        heart.remove();
-    },10000);
+    document.body.appendChild(
+        heart
+    );
+
+
+    setTimeout(
+        ()=>heart.remove(),
+        10000
+    );
 }
 
-setInterval(createFloatingHeart,750);
 
-document.addEventListener("click",()=>{
-    if(bgMusic.paused){
-        startMusic();
-    }
-},{once:true});
+setInterval(
+    createFloatingHeart,
+    750
+);
+
+
+/* =====================================================
+   ENTER KEY PASSWORD
+===================================================== */
+
+document
+    .getElementById(
+        "passcodeInput"
+    )
+    .addEventListener(
+        "keydown",
+        event=>{
+
+            if(event.key==="Enter"){
+
+                checkPassword();
+
+            }
+
+        }
+    );
 
 </script>
 
