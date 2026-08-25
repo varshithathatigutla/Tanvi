@@ -2,637 +2,913 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>For Tanvitha 💗</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Tanvithaaa 💗</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{scroll-behavior:smooth}
 
 body{
-font-family:"Trebuchet MS","Comic Sans MS",sans-serif;
-color:#59384f;
-min-height:100vh;
-overflow-x:hidden;
-background:linear-gradient(135deg,#ffddeb,#eee1ff,#fff0d9);
+  font-family:"Trebuchet MS","Comic Sans MS",system-ui,sans-serif;
+  color:#633f58;
+  overflow-x:hidden;
+  background:
+    radial-gradient(circle at 10% 10%,#fff 0 32px,transparent 33px),
+    radial-gradient(circle at 90% 20%,#fff 0 25px,transparent 26px),
+    linear-gradient(135deg,#ffe7f1,#eee5ff,#fff1d8);
 }
 
-/* CUTE CARTOON BACKGROUND */
-body:before{
-content:"";
-position:fixed;
-inset:0;
-pointer-events:none;
-opacity:.35;
-background:
-radial-gradient(circle at 10% 15%,#fff 0 35px,transparent 36px),
-radial-gradient(circle at 90% 12%,#fff 0 45px,transparent 46px),
-radial-gradient(circle at 20% 90%,#fff 0 30px,transparent 31px),
-radial-gradient(circle at 80% 82%,#fff 0 38px,transparent 39px);
-z-index:-2;
+body::before{
+  content:"🎀   ✨   🌷   🐾   💗   ⭐   ☁️   🎀";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:0;
+  opacity:.13;
+  font-size:30px;
+  line-height:4;
+  word-spacing:35px;
+  animation:bgFloat 18s linear infinite;
 }
 
-.doodle{
-position:fixed;
-font-size:42px;
-z-index:-1;
-animation:float 4s ease-in-out infinite;
-opacity:.8;
-}
-.d1{top:8%;left:4%}
-.d2{top:12%;right:5%;animation-delay:1s}
-.d3{bottom:9%;left:6%;animation-delay:2s}
-.d4{bottom:8%;right:6%;animation-delay:3s}
-
-@keyframes float{
-0%,100%{transform:translateY(0) rotate(-5deg)}
-50%{transform:translateY(-15px) rotate(6deg)}
+@keyframes bgFloat{
+  from{transform:translateY(0)}
+  to{transform:translateY(-180px)}
 }
 
 .screen{
-display:none;
-min-height:100vh;
-padding:30px 18px;
-align-items:center;
-justify-content:center;
-text-align:center;
-position:relative;
+  display:none;
+  min-height:100vh;
+  width:100%;
+  padding:35px 18px;
+  position:relative;
+  z-index:1;
+  align-items:center;
+  justify-content:center;
 }
+
 .screen.active{
-display:flex;
-animation:appear .7s ease;
+  display:flex;
+  animation:screenIn .65s ease;
 }
 
-@keyframes appear{
-from{opacity:0;transform:translateY(20px) scale(.97)}
-to{opacity:1;transform:none}
+@keyframes screenIn{
+  from{opacity:0;transform:translateY(18px) scale(.98)}
+  to{opacity:1;transform:none}
 }
 
-.content{width:min(900px,100%)}
-
-h1{
-font-size:clamp(42px,9vw,80px);
-line-height:1.05;
-margin:20px 0;
-}
-
-h2{
-font-size:clamp(30px,6vw,55px);
-margin-bottom:20px;
-}
-
-p{
-font-size:18px;
-line-height:1.8;
-}
-
-button{
-border:0;
-padding:14px 27px;
-margin:10px 5px;
-border-radius:50px;
-background:linear-gradient(135deg,#ff6f9f,#a477e5);
-color:white;
-font-size:17px;
-font-weight:bold;
-cursor:pointer;
-box-shadow:0 12px 30px #a85c8840;
-transition:.25s;
-}
-
-button:hover{
-transform:translateY(-3px) scale(1.03);
-}
-
-button:disabled{
-opacity:.45;
-cursor:not-allowed;
+.container{
+  width:min(900px,96vw);
+  text-align:center;
 }
 
 .card{
-background:#ffffffc9;
-backdrop-filter:blur(10px);
-border:2px solid #ffffff;
-border-radius:35px;
-padding:40px 25px;
-box-shadow:0 25px 70px #68425a20;
+  width:min(760px,94vw);
+  margin:auto;
+  padding:45px 25px;
+  background:#ffffffdf;
+  border:4px solid white;
+  border-radius:45px;
+  box-shadow:
+    0 25px 70px rgba(105,55,100,.18),
+    inset 0 0 0 3px #ffd5e5;
+  position:relative;
+  overflow:hidden;
 }
 
+.card::before{
+  content:"";
+  width:110px;
+  height:110px;
+  border-radius:50%;
+  background:#ffe1ee;
+  position:absolute;
+  top:-55px;
+  left:-35px;
+}
+
+.card::after{
+  content:"";
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  background:#e8ddff;
+  position:absolute;
+  right:-45px;
+  bottom:-45px;
+}
+
+h1{
+  color:#ff4d91;
+  font-size:clamp(42px,8vw,78px);
+  text-shadow:4px 5px 0 #ffd7e6;
+  margin:18px 0;
+}
+
+h2{
+  color:#ff5797;
+  font-size:clamp(30px,6vw,55px);
+  text-shadow:3px 4px 0 #ffe0ed;
+  margin:15px 0;
+}
+
+p{
+  font-size:18px;
+  line-height:1.75;
+}
+
+.small{
+  font-size:15px;
+  opacity:.75;
+}
+
+button{
+  border:none;
+  outline:none;
+  cursor:pointer;
+  margin-top:25px;
+  padding:15px 28px;
+  border-radius:999px;
+  background:linear-gradient(135deg,#ff73a8,#ff4d91);
+  color:white;
+  font-size:17px;
+  font-weight:bold;
+  box-shadow:0 8px 0 #d93f79,0 15px 30px rgba(220,65,120,.22);
+  transition:.2s;
+}
+
+button:hover{
+  transform:translateY(-3px) scale(1.03);
+}
+
+button:active{
+  transform:translateY(4px);
+  box-shadow:0 3px 0 #d93f79;
+}
+
+/* INTRO */
+
 .gift{
-font-size:105px;
-animation:bounce 1.5s infinite;
+  font-size:110px;
+  animation:giftBounce 1.8s infinite;
+}
+
+@keyframes giftBounce{
+  50%{transform:translateY(-15px) rotate(3deg)}
+}
+
+.intro-text{
+  max-width:620px;
+  margin:20px auto;
+}
+
+.open-btn{
+  font-size:20px;
+  padding:18px 34px;
+}
+
+/* PASSWORD */
+
+.lock{
+  font-size:80px;
+  animation:bounce 1.7s infinite;
 }
 
 @keyframes bounce{
-50%{transform:translateY(-12px) rotate(4deg)}
+  50%{transform:translateY(-10px)}
 }
 
-.title{
-color:#ff4d91;
-text-shadow:0 5px 20px #ff72a633;
+.pass-input{
+  display:block;
+  width:220px;
+  margin:25px auto 10px;
+  padding:15px;
+  border:3px solid #ffc1d7;
+  border-radius:20px;
+  text-align:center;
+  font-size:25px;
+  letter-spacing:8px;
+  outline:none;
 }
 
-.lock{
-font-size:80px;
-animation:pulse 1.4s infinite;
+.pass-input:focus{
+  border-color:#ff6fa5;
 }
 
-@keyframes pulse{
-50%{transform:scale(1.12)}
+.error{
+  color:#e8457b;
+  font-weight:bold;
+  min-height:30px;
+  margin-top:10px;
 }
 
-.pass{
-width:210px;
-padding:16px;
-border-radius:18px;
-border:2px solid #ff8bb2;
-background:#ffffffd9;
-font-size:27px;
-text-align:center;
-outline:none;
+/* QUESTION */
+
+.question{
+  font-size:23px;
+  margin:25px auto;
 }
 
-#error{
-min-height:65px;
-color:#d64c82;
-font-weight:bold;
-margin-top:10px;
+.danger{
+  background:#ff6a7e;
+  box-shadow:0 8px 0 #c93e53;
 }
 
-.date{
-font-size:clamp(40px,8vw,75px);
-font-weight:bold;
-color:#8c62c8;
+/* BIRTHDAY */
+
+.birthday-title{
+  animation:birthdayPop 1.2s ease;
 }
 
-.bday{
-color:#ff4d91;
-animation:pop 1s ease;
+@keyframes birthdayPop{
+  0%{transform:scale(.2);opacity:0}
+  70%{transform:scale(1.1)}
+  100%{transform:scale(1);opacity:1}
 }
 
-@keyframes pop{
-0%{transform:scale(.2);opacity:0}
-70%{transform:scale(1.1)}
-100%{transform:scale(1);opacity:1}
+.crackers{
+  font-size:65px;
+  letter-spacing:15px;
+  animation:cracker 1s infinite;
 }
 
-/* SONG */
-.song-card{
-max-width:700px;
-margin:auto;
-background:#ffffffd0;
-padding:30px;
-border-radius:35px;
-box-shadow:0 20px 60px #65405a25;
+@keyframes cracker{
+  50%{transform:scale(1.15)}
 }
 
-.song-icon{
-font-size:75px;
+/* HYPE */
+
+.hype-line{
+  font-size:25px;
+  margin:18px auto;
 }
 
-audio{
-width:100%;
-margin:20px 0;
-}
-
-/* WARNING */
-.overlay{
-display:none;
-position:fixed;
-inset:0;
-z-index:1000;
-background:#29152d99;
-backdrop-filter:blur(8px);
-align-items:center;
-justify-content:center;
-padding:20px;
-}
-
-.overlay.show{display:flex}
-
-.warning{
-background:#fff7fb;
-padding:35px 25px;
-border-radius:30px;
-max-width:450px;
-box-shadow:0 30px 80px #0005;
-animation:pop .4s ease;
-}
-
-.warning h2{
-color:#ff4d91;
+.suspense{
+  font-size:19px;
+  margin-top:15px;
 }
 
 /* COMEDY */
-.comedy{
-width:min(430px,90%);
-max-height:550px;
-object-fit:cover;
-border-radius:30px;
-box-shadow:0 20px 50px #0003;
+
+.comedy-img{
+  width:min(430px,90%);
+  margin:25px auto;
+  display:block;
+  padding:10px;
+  background:white;
+  border-radius:35px;
+  border:4px solid #ffd0e1;
+  box-shadow:0 18px 45px rgba(100,50,80,.18);
+  transform:rotate(-2deg);
 }
 
 .fah{
-font-size:clamp(45px,9vw,85px);
-font-weight:bold;
-animation:shake .4s infinite;
+  display:inline-block;
+  margin:12px;
+  padding:12px 24px;
+  border-radius:30px;
+  background:white;
+  border:3px solid #ff8eb5;
+  box-shadow:5px 7px 0 #ffc5d9;
+  animation:fah .35s infinite alternate;
 }
 
-@keyframes shake{
-25%{transform:rotate(-3deg)}
-75%{transform:rotate(3deg)}
+.fah span{
+  color:#ff4d91;
+  font-size:55px;
+  font-weight:bold;
+}
+
+@keyframes fah{
+  from{transform:rotate(-3deg) scale(1)}
+  to{transform:rotate(3deg) scale(1.04)}
+}
+
+/* SONG */
+
+.music-card{
+  max-width:580px;
+  margin:25px auto;
+  padding:28px;
+  background:#fff;
+  border-radius:32px;
+  border:3px dashed #ff9fc0;
+  box-shadow:0 15px 40px rgba(100,50,80,.12);
+}
+
+.music-icon{
+  font-size:70px;
+  animation:music 1s infinite;
+}
+
+@keyframes music{
+  50%{transform:translateY(-8px) rotate(5deg)}
+}
+
+#dedicatedSong{
+  display:none;
+}
+
+.song-status{
+  margin-top:15px;
+  color:#ff5797;
+}
+
+/* WARNING */
+
+.warning{
+  position:fixed;
+  inset:0;
+  background:rgba(60,30,55,.45);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:1000;
+  padding:20px;
+}
+
+.warning.show{
+  display:flex;
+}
+
+.warning-box{
+  width:min(430px,94vw);
+  background:white;
+  padding:35px 25px;
+  border-radius:35px;
+  text-align:center;
+  border:4px solid #ffd4e3;
+  box-shadow:0 25px 70px rgba(0,0,0,.25);
+  animation:pop .35s ease;
+}
+
+@keyframes pop{
+  from{transform:scale(.6);opacity:0}
+  to{transform:scale(1);opacity:1}
+}
+
+.warning-box .emoji{
+  font-size:60px;
 }
 
 /* MEMORIES */
-.slider{
-width:min(500px,94vw);
-margin:25px auto;
-touch-action:pan-y;
+
+.memory-card{
+  max-width:650px;
+  margin:auto;
 }
 
-.memory{
-display:none;
-background:#ffffffd5;
-padding:12px;
-border-radius:28px;
-box-shadow:0 20px 50px #0002;
-animation:slide .5s ease;
+.memory-photo{
+  width:min(600px,92vw);
+  height:min(500px,65vh);
+  object-fit:contain;
+  display:block;
+  margin:25px auto;
+  padding:10px;
+  background:white;
+  border-radius:35px;
+  border:4px solid #ffd3e3;
+  box-shadow:0 20px 50px rgba(90,45,80,.2);
+  user-select:none;
 }
 
-.memory.active{display:block}
-
-.memory img{
-width:100%;
-height:min(600px,65vh);
-object-fit:cover;
-border-radius:20px;
+.memory-number{
+  color:#ff5797;
+  font-weight:bold;
 }
 
-.memory p{
-padding:15px 5px 5px;
+.swipe-note{
+  font-size:15px;
+  opacity:.7;
 }
 
-.favorite{
-background:linear-gradient(135deg,#ffd8e9,#e8dcff);
-border:3px solid #ff9abd;
+.memory-buttons{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
 }
 
-.favorite-label{
-color:#ff4d91;
-font-weight:bold;
-font-size:20px;
-padding:8px;
+.memory-buttons button{
+  margin-top:10px;
 }
 
-@keyframes slide{
-from{opacity:0;transform:translateX(35px)}
-to{opacity:1;transform:none}
-}
-
-.controls{
-display:flex;
-justify-content:center;
-align-items:center;
-gap:20px;
-}
-
-.controls button{
-width:50px;
-height:50px;
-padding:0;
-}
+/* MESSAGE */
 
 .message{
-max-width:850px;
-margin:auto;
-padding:40px 28px;
-text-align:left;
-background:#ffffffd5;
-border-radius:35px;
-box-shadow:0 20px 60px #0002;
+  text-align:left;
+  max-width:700px;
+  margin:25px auto;
+  padding:30px 25px;
+  background:#fffafc;
+  border-radius:30px;
+  border:3px dashed #ffb3ca;
+  line-height:1.8;
 }
 
-.message h2{text-align:center}
-
-.message p{margin:18px 0}
-
-.center{text-align:center!important}
-
-/* FINAL CATS */
-.final{
-background:radial-gradient(circle,#fff5fa,#ffd8e9,#e6d9ff);
+.message p{
+  margin-bottom:20px;
 }
 
-.love{
-font-size:clamp(50px,10vw,90px);
-color:#ff4e8c;
-animation:love 1.2s ease;
+.signature{
+  text-align:center;
+  color:#ff4d91;
+  font-size:25px;
 }
 
-@keyframes love{
-from{transform:scale(.2);opacity:0}
-to{transform:scale(1);opacity:1}
+/* FINAL */
+
+.final-card{
+  padding:40px 25px 35px;
 }
 
-.cats{
-font-size:100px;
-height:170px;
-display:flex;
-justify-content:center;
-align-items:end;
-gap:0;
-position:relative;
+.final-doodles{
+  font-size:28px;
+  letter-spacing:10px;
+  color:#ff75a8;
+  animation:doodleFloat 2s ease-in-out infinite;
 }
 
-.cat1{animation:leftcat 1.8s infinite}
-.cat2{animation:rightcat 1.8s infinite}
-
-@keyframes leftcat{
-50%{transform:translateX(25px) rotate(4deg)}
+@keyframes doodleFloat{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-7px)}
 }
 
-@keyframes rightcat{
-50%{transform:translateX(-25px) rotate(-4deg)}
+.cute-doodle{
+  width:250px;
+  height:190px;
+  margin:8px auto 12px;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#fff7fb;
+  border:3px dashed #ffb2ca;
+  border-radius:50%;
+  box-shadow:0 15px 35px rgba(120,60,100,.12);
 }
 
-.kiss{
-position:absolute;
-top:5px;
-font-size:40px;
-animation:kiss 1.5s infinite;
+.cute-cat{
+  font-family:monospace;
+  font-size:28px;
+  line-height:1.05;
+  color:#8d6684;
+  transform:rotate(-3deg);
+  animation:catFloat 2s ease-in-out infinite;
+  white-space:nowrap;
 }
 
-@keyframes kiss{
-50%{transform:translateY(-15px) scale(1.2)}
+@keyframes catFloat{
+  0%,100%{transform:translateY(0) rotate(-3deg)}
+  50%{transform:translateY(-8px) rotate(3deg)}
 }
 
-/* FLOATING HEARTS */
-.heart{
-position:fixed;
-bottom:-30px;
-pointer-events:none;
-animation:rise linear forwards;
-z-index:50;
+.doodle-star{
+  position:absolute;
+  color:#ffc04d;
+  font-size:30px;
+  animation:starSpin 2s infinite;
 }
 
-@keyframes rise{
-to{
-transform:translateY(-110vh) rotate(360deg);
-opacity:0;
-}
+.star1{
+  top:25px;
+  left:30px;
 }
 
-.music{
-position:fixed;
-right:15px;
-top:15px;
-z-index:500;
-font-size:14px;
-padding:10px 16px;
+.star2{
+  bottom:25px;
+  right:35px;
+  font-size:24px;
+}
+
+@keyframes starSpin{
+  50%{transform:rotate(25deg) scale(1.2)}
+}
+
+.doodle-heart{
+  position:absolute;
+  color:#ff6f9f;
+  font-size:25px;
+  animation:heartFloat 1.7s infinite;
+}
+
+.heart1{
+  top:30px;
+  right:35px;
+}
+
+.heart2{
+  bottom:25px;
+  left:35px;
+}
+
+@keyframes heartFloat{
+  50%{transform:translateY(-8px) scale(1.15)}
+}
+
+.tiny-hearts{
+  position:absolute;
+  bottom:7px;
+  font-size:17px;
+  animation:tinyFloat 2s infinite;
+}
+
+@keyframes tinyFloat{
+  50%{transform:translateY(-5px)}
+}
+
+.final-card h1{
+  margin-top:10px;
+  animation:lovePop 1s ease;
+}
+
+@keyframes lovePop{
+  0%{
+    transform:scale(.3) rotate(-8deg);
+    opacity:0;
+  }
+  70%{transform:scale(1.1) rotate(3deg)}
+  100%{
+    transform:scale(1);
+    opacity:1;
+  }
+}
+
+.final-birthday{
+  color:#9a63c7;
+  font-size:24px;
+  margin-bottom:22px;
+}
+
+.final-two-lines{
+  max-width:680px;
+  margin:20px auto;
+  padding:20px 18px;
+  background:#fff7fb;
+  border-radius:27px;
+  border:3px dashed #ffadc7;
+}
+
+.final-two-lines p{
+  font-size:18px;
+  line-height:1.7;
+  margin:8px 0;
+}
+
+.replay{
+  margin-top:25px;
+  padding:22px;
+  background:#fff0f6;
+  border-radius:28px;
+}
+
+.replay p{
+  font-size:20px;
+  margin-bottom:5px;
+}
+
+.bottom-doodles{
+  margin-top:20px;
+}
+
+.footer-heart{
+  margin-top:20px;
+  color:#ff639b;
+  letter-spacing:10px;
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+  .card{
+    padding:32px 16px;
+    border-radius:32px;
+  }
+
+  p{
+    font-size:16px;
+  }
+
+  .gift{
+    font-size:80px;
+  }
+
+  .memory-photo{
+    height:55vh;
+  }
+
+  .cute-doodle{
+    width:220px;
+    height:170px;
+  }
+
+  .cute-cat{
+    font-size:24px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- CUTE DOODLES -->
-<div class="doodle d1">🌷</div>
-<div class="doodle d2">✨</div>
-<div class="doodle d3">🐾</div>
-<div class="doodle d4">🎀</div>
-
 <!-- BACKGROUND MUSIC -->
-<audio id="bgMusic" loop>
-<source src="song.mp3" type="audio/mpeg">
-</audio>
+<audio id="bgMusic" src="song.mp3" loop preload="auto"></audio>
 
-<!-- FAHH -->
-<audio id="fah">
-<source src="Fahhh.mp3" type="audio/mpeg">
-</audio>
+<!-- FAHHH -->
+<audio id="fahMusic" src="Fahhh.mp3" preload="auto"></audio>
 
-<button class="music" onclick="toggleMusic()">🎵 Music</button>
+<!-- DEDICATED SONG VIDEO -->
+<video id="dedicatedSong" playsinline preload="auto">
+  <source src="song.mp4" type="video/mp4">
+</video>
 
 
-<!-- 1 VIRTUAL GIFT -->
+<!-- ================= INTRO ================= -->
+
 <section class="screen active" id="intro">
-<div class="content">
-
+<div class="container">
 <div class="card">
 
-<div style="font-size:70px">🐱💗🐱</div>
-
-<p>
-I couldn't give you an in-person gift<br>
-or surprise you properly this time... 🥺
-</p>
-
-<h1 class="title">
-So I made you<br>
-a little virtual gift 🎁
-</h1>
+<div class="final-doodles">
+  ✨ 🎀 🌷 ✨ 🐾 💗 ✨
+</div>
 
 <div class="gift">🎁</div>
 
+<h1>A Little Surprise For You</h1>
+
+<div class="intro-text">
+
 <p>
-Something made specially for you,<br>
-Tanvithaaa. 💗
+  I couldn't give you an in-person gift
+  or surprise this time... 🥺
 </p>
 
-<button onclick="openGift()">
-Open My Gift 💌
+<p>
+  Sooo I made you a little virtual gift instead. 💌✨
+</p>
+
+<p>
+  It's not much... but it's made with a lot of love. 🫂❤️
+</p>
+
+</div>
+
+<button class="open-btn" onclick="openGift()">
+  Open My Virtual Gift 🎁💗
 </button>
+
+<p class="small">
+  P.S. you're not allowed to judge me 😂
+</p>
 
 </div>
 </div>
 </section>
 
 
-<!-- 2 PASSWORD -->
+<!-- ================= PASSWORD ================= -->
+
 <section class="screen" id="password">
-<div class="content">
+<div class="container">
+<div class="card">
 
 <div class="lock">🔐</div>
 
 <h2>Waittt... 👀</h2>
 
 <p>
-This part is only for you. 🤭<br>
-Enter the secret password.
+  This gift is only for one particular person. 🥹
+</p>
+
+<p>
+  Enter the secret code.
 </p>
 
 <input
-id="pass"
-class="pass"
-type="password"
-maxlength="2"
-inputmode="numeric"
-placeholder="••"
+  id="passwordInput"
+  class="pass-input"
+  type="password"
+  maxlength="2"
+  inputmode="numeric"
+  placeholder="••"
 >
+
+<div id="passwordError" class="error"></div>
+
+<button onclick="checkPassword()">
+  Unlock 💗
+</button>
+
+</div>
+</div>
+</section>
+
+
+<!-- ================= QUESTION ================= -->
+
+<section class="screen" id="question">
+<div class="container">
+<div class="card">
+
+<div class="final-doodles">
+  👀 ✨ 🎀
+</div>
+
+<h2>I made something for you...</h2>
+
+<p class="question">
+  Do you really wanna see it? 👀💗
+</p>
+
+<button onclick="go('really')">
+  YESSS 😭💗
+</button>
 
 <br>
 
-<button onclick="checkPass()">Unlock 💗</button>
-
-<div id="error"></div>
-
-</div>
-</section>
-
-
-<!-- 3 OPENING -->
-<section class="screen" id="opening">
-<div class="content">
-
-<p>Hey waittt... 👀</p>
-
-<h1>
-I made something<br>
-for you 💌
-</h1>
-
-<p>
-Do you really wanna see it?
-</p>
-
-<button onclick="go('really')">YES 🥹💗</button>
-<button onclick="go('no')" style="background:#fff;color:#59384f">
-NO 😭
+<button class="danger" onclick="noWay()">
+  NO 😭
 </button>
 
 </div>
-</section>
-
-
-<!-- NO -->
-<section class="screen" id="no">
-<div class="content">
-
-<h1>WHATTT?! 😭</h1>
-
-<p>
-You said NO?!<br><br>
-Fine... I'll kill you. 🙂😂
-<br><br>
-Now choose properly. 😌
-</p>
-
-<button onclick="go('opening')">
-Okay okay YES 😭💗
-</button>
-
 </div>
 </section>
 
 
-<!-- REALLY -->
+<!-- ================= REALLY ================= -->
+
 <section class="screen" id="really">
-<div class="content">
+<div class="container">
+<div class="card">
 
-<h2>Ohhh really? 👀</h2>
+<div class="final-doodles">
+  👀 👀 👀
+</div>
 
-<p>
-You REALLY wanna see it?<br>
-Like... REALLY REALLY? 😭
-</p>
+<h2>Really really? 😭</h2>
 
-<button onclick="go('step')">
-YESSS 😭
+<p> You wanna know what's inside? </p>
+
+<p> Like... actually ready? 👀 </p>
+
+<button onclick="go('birthday')">
+  One step ahead → 💗
 </button>
 
+</div>
 </div>
 </section>
 
 
-<!-- STEP -->
-<section class="screen" id="step">
-<div class="content">
+<!-- ================= BIRTHDAY ================= -->
 
-<h2>One step ahead... 👀</h2>
-
-<p>
-No turning back now. 🤭
-</p>
-
-<button onclick="go('step2')">
-Click here 💗
-</button>
-
-</div>
-</section>
-
-
-<!-- STEP 2 -->
-<section class="screen" id="step2">
-<div class="content">
-
-<h2>Are you REALLY ready? 😭</h2>
-
-<p>
-Because something special is coming...
-</p>
-
-<button onclick="birthday()">
-I'm ready 💗
-</button>
-
-</div>
-</section>
-
-
-<!-- BIRTHDAY -->
 <section class="screen" id="birthday">
-<div class="content">
+<div class="container">
+<div class="card">
 
-<div style="font-size:90px">🎂</div>
-
-<p>It's really a special day... ✨</p>
-
-<div class="date">
-25 AUGUST
+<div class="crackers">
+  🎆 🎉 🎇
 </div>
 
-<h1 class="bday">
-HAPPIEST BIRTHDAY<br>
-TANVITHAAA! 🎀💗
+<h1 class="birthday-title">
+  Happiest Birthday
 </h1>
 
-<p>🎆 ✨ 🎉 💗 🎂</p>
+<h2>
+  Tanvithaaa 🎂🎀💗
+</h2>
+
+<p>25 August ✨</p>
+
+<p>
+  Today is officially your dayyyy! 🥹🫶🏻
+</p>
+
+<button onclick="go('hype')">
+  Wait... there's more 👀
+</button>
+
+</div>
+</div>
+</section>
+
+
+<!-- ================= HYPE ================= -->
+
+<section class="screen" id="hype">
+<div class="container">
+<div class="card">
+
+<div class="final-doodles">
+  🌷 ✨ 👀 ✨ 🌷
+</div>
+
+<h2>
+  I found a beautiful lady in this world... 👀
+</h2>
+
+<p class="hype-line">
+  And I thought...
+</p>
+
+<p class="hype-line">
+  "Okayyy, this person deserves something special." 🥹💗
+</p>
+
+<p class="suspense">
+  But before I show you... there's one tiny problem. 😭
+</p>
+
+<button onclick="go('comedy')">
+  One step ahead → 😂
+</button>
+
+</div>
+</div>
+</section>
+
+
+<!-- ================= COMEDY ================= -->
+
+<section class="screen" id="comedy">
+<div class="container">
+<div class="card">
+
+<div class="final-doodles">
+  😂 ✨ 🐱 ✨ 😂
+</div>
+
+<h2>Fahhhhh 😭😂</h2>
+
+<img
+  src="comedy.jpg"
+  class="comedy-img"
+  alt="Funny memory"
+>
+
+<div class="fah">
+  <span>FAHHHH 😭😂</span>
+</div>
+
+<p>
+  Okay okayyy... don't kill me. 😭
+</p>
+
+<p>
+  I HAD TO PUT THIS HERE. 😂
+</p>
 
 <button onclick="go('song')">
-There's something for you 🎵
+  Okay nexttt → 🎵
 </button>
 
+</div>
 </div>
 </section>
 
 
-<!-- SONG -->
+<!-- ================= DEDICATED SONG ================= -->
+
 <section class="screen" id="song">
-<div class="content">
+<div class="container">
+<div class="card">
 
-<div class="song-card">
+<div class="final-doodles">
+  🎵 💗 🎀 🎵
+</div>
 
-<div class="song-icon">🐱🎧🐱</div>
-
-<h2 style="color:#ff4d91">
-A Song Dedicated To You 💗
+<h2>
+  A Song Dedicated To You 💗
 </h2>
 
 <p>
-This one is especially for you.<br>
-Please listen to it fully... 🥹❤️
+  This one is especially for you, Thanuuu. 🥹🫶🏻
 </p>
 
-<audio id="dedicatedSong" controls>
-<source src="song.mp4" type="video/mp4">
-</audio>
+<div class="music-card">
 
-<p id="songStatus">
-🎵 Please listen till the end...
+<div class="music-icon">🎧</div>
+
+<p>
+  Let it play till the end, okay? 🥺
 </p>
+
+<p id="songStatus" class="song-status">
+  🎶 Starting your song...
+</p>
+
+</div>
 
 <button onclick="songNext()">
-Next → 💗
+  Next → 💗
 </button>
 
 </div>
@@ -640,259 +916,154 @@ Next → 💗
 </section>
 
 
-<!-- SONG WARNING -->
-<div class="overlay" id="warning">
-<div class="warning">
+<!-- ================= WARNING ================= -->
 
-<div style="font-size:60px">🥺🎵</div>
+<div id="warning" class="warning">
+
+<div class="warning-box">
+
+<div class="emoji">🥺🎧</div>
 
 <h2>Waittt!</h2>
 
 <p>
-This song is dedicated especially to you. ❤️
-<br><br>
-Please listen to it fully before clicking Next.
-<br><br>
-I really want you to hear every bit of it. 🫂
+  Listen to it fullyyy first. 🥹💗
+</p>
+
+<p>
+  No skipping this one. 👀
 </p>
 
 <button onclick="closeWarning()">
-Okayyy, I'll listen 💗
+  Okayyy, I'll listen 😭❤️
 </button>
 
 </div>
 </div>
 
 
-<!-- HYPE -->
-<section class="screen" id="hype">
-<div class="content">
+<!-- ================= MEMORIES ================= -->
 
-<h2>
-I found a beautiful lady...
-</h2>
+<section class="screen" id="memories">
+<div class="container">
+<div class="card memory-card">
 
-<p style="font-size:26px">
-in this world... 👀
-</p>
-
-<p>
-And apparently...
-</p>
-
-<button onclick="go('comedy')">
-I think I found her → 😭
-</button>
-
+<div class="final-doodles">
+  📸 💗 ✨ 📸
 </div>
-</section>
-
-
-<!-- COMEDY -->
-<section class="screen" id="comedy">
-<div class="content">
 
 <h2>
-And here she is... 👀
+  Some of my favourite memories 🥹
 </h2>
+
+<p class="memory-number" id="memoryNumber">
+  1 / 12
+</p>
 
 <img
-src="comedy.jpg"
-class="comedy"
-alt="Funny picture"
+  id="memoryPhoto"
+  class="memory-photo"
+  src="photo1.jpg"
+  alt="Memory"
 >
 
-<div class="fah">
-FAHHHHHH 😭😂
+<p class="swipe-note">
+  Swipe / use the buttons to see the next one → 👀
+</p>
+
+<div class="memory-buttons">
+
+<button onclick="previousMemory()">←</button>
+
+<button onclick="nextMemory()">
+  Next memory 💗 →
+</button>
+
 </div>
 
-<button onclick="playFah()">
-🔊 FAHHHH
-</button>
-
-<br>
-
-<button onclick="go('memories')">
-Okay enough bullying 😂
-</button>
-
+</div>
 </div>
 </section>
 
 
-<!-- MEMORIES -->
-<section class="screen" id="memories">
-<div class="content">
+<!-- ================= MESSAGE ================= -->
+
+<section class="screen" id="message">
+<div class="container">
+<div class="card">
+
+<div class="final-doodles">
+  💌 🌷 ✨ 💗
+</div>
 
 <h2>
-Our Little Memories 📸💗
+  A little message from me to you... 💌
 </h2>
-
-<p>
-Swipe through them one by one 🥹
-</p>
-
-<div class="slider">
-
-<div class="memory active">
-<img src="photo1.jpg">
-<p>One of those moments I'll always remember. 🫶🏻</p>
-</div>
-
-<div class="memory">
-<img src="photo2.jpg">
-<p>The kind of memory that makes me smile. 🥹</p>
-</div>
-
-<div class="memory">
-<img src="photo3.jpg">
-<p>Us being completely crazy. 😂</p>
-</div>
-
-<div class="memory">
-<img src="photo4.jpg">
-<p>Another little piece of our story. 💗</p>
-</div>
-
-<div class="memory">
-<img src="photo5.jpg">
-<p>A memory worth keeping forever. 🌷</p>
-</div>
-
-<div class="memory">
-<img src="photo6.jpg">
-<p>One more little moment with you. 🫂</p>
-</div>
-
-<div class="memory">
-<img src="photo7.jpg">
-<p>Still makes me smile every time. 😭💗</p>
-</div>
-
-<div class="memory">
-<img src="photo8.jpg">
-<p>Our kind of chaos. 😂🫶🏻</p>
-</div>
-
-<div class="memory">
-<img src="photo9.jpg">
-<p>A tiny moment that became a memory. ✨</p>
-</div>
-
-<div class="memory favorite">
-<div class="favorite-label">
-💗 MY FAVOURITE OF ALL TIME 💗
-</div>
-<img src="photo10.jpg">
-<p>Some pictures just feel a little more special. 🥹❤️</p>
-</div>
-
-<div class="memory">
-<img src="photo11.jpg">
-<p>Another one I'll keep forever. 💗</p>
-</div>
-
-<div class="memory">
-<img src="photo12.jpg">
-<p>And many more memories waiting for us... ♾️</p>
-</div>
-
-</div>
-
-<div class="controls">
-<button onclick="prev()">←</button>
-<span id="counter">1 / 12</span>
-<button onclick="next()">→</button>
-</div>
-
-<p style="font-size:14px;opacity:.6">
-← Swipe left/right →
-</p>
-
-<button onclick="go('message')">
-One last message... 💌
-</button>
-
-</div>
-</section>
-
-
-<!-- MESSAGE -->
-<section class="screen" id="message">
-<div class="content">
 
 <div class="message">
-
-<h2>
-A little message from me to you… 💌
-</h2>
 
 <p>Thanuuu 🥹❤️</p>
 
 <p>
-Nijam cheppali ante, mana madhya konni
-misunderstandings valla ochina gap naaku chala
-baadha anipinchindi. Mundu laga matladukovali
-anukunna ah rapo ravatledu, everything felt a
-little different… and honestly, I missed you more
-than I ever said. 🥲
+Nijam cheppali ante, mana madhya konni misunderstandings
+valla ochina gap naaku chala baadha anipinchindi.
+Mundu laga matladukovali anukunna aa rapo ravatledu,
+everything felt a little different... and honestly,
+I missed you more than I ever said. 🥲
 </p>
 
 <p>
-But ippudu malli manam matladukuntunnam kada…
-that genuinely makes me happy. 🫂❤️ Maybe
-everything isn't exactly like before yet, but I'm
-just thankful that somehow, we found our way
-back to each other.
+But ippudu malli manam matladukuntunnam kada...
+that genuinely makes me happy. 🫂❤️
+Maybe everything isn't exactly like before yet,
+but I'm just thankful that somehow,
+we found our way back to each other.
 </p>
 
 <p>
-Naaku chala mandi friends unnaru, but you are
-different in a way I can't really explain. Some
-people become a part of your life without you
-even realising how important they've become…
+Naaku chala mandi friends unnaru,
+but you are different in a way I can't really explain.
+Some people become a part of your life without you
+even realising how important they've become...
 nuvvu ala na life lo oka person ayipoyavvv 🥹🫶🏻
 </p>
 
 <p>
-Nenu literally words lo cheppalekapothunna how
-much I love you 😭❤️ Sometimes I wish I could
-just make you understand everything I feel
-without actually having to say it, because I
-don't think words will ever be enough.
+Nenu literally words lo cheppalekapothunna
+how much I love you 😭❤️ Sometimes I wish I could
+just make you understand everything I feel without
+actually having to say it, because I don't think
+words will ever be enough.
 </p>
 
 <p>
-Konni saarlu nee gurinchi or nee special moments
-gurinchi think chesthe, literally “ippudu nenu
-thana pakkana unte bagundedhi” ani anipisthundi. 🥺
+Konni saarlu nee gurinchi think chesthe,
+literally “ippudu nenu thana pakkana unte bagundedhi”
+ani anipisthundi. 🥺
 </p>
 
 <p>
 I wish I could be there beside you to celebrate
-your happiness with you, listen to your random
-stories, laugh at the stupidest things with you,
-irritate you for absolutely no reason 😂, and just
-sit beside you even when there is nothing to say 🫂…
+your happiness with you, listen to your random stories,
+laugh at the stupidest things with you,
+irritate you for absolutely no reason 😂,
+and just sit beside you even when there is nothing to say. 🫂
 </p>
 
 <p>
-Maybe not this time… But definitely later. ❤️
+Maybe not this time... but definitely later. ❤️
 </p>
 
 <p>
 One day, I want to be there for the moments that
-actually matter. Random ordinary days aina,
-somehow I just want to be there. I don't know
-exactly what the future looks like, but I'll always
-be ready to show up for you 🥹✨
+actually matter. I don't know exactly what the future
+looks like, but I'll always be ready to show up for you. 🥹✨
 </p>
 
 <p>
-Konchem ekkuva ainattundemoo😉 kaani I'm really
-missing those gossips, malli andari meedha
-comment cheskuntu iddaram kalisi chill ayye
-time yeppudu vasthundoo 🙄😒
+Konchem ekkuva ainattundemoo 😉 kaani I'm really
+missing those gossips... malli andari meedha comments
+cheskuntu iddaram kalisi chill ayye time yeppudu vasthundoo 🙄😂
 </p>
 
 <p>
@@ -900,36 +1071,35 @@ And you know what I love the most?
 </p>
 
 <p>
-Mana bond lo unna aa little things. The random
-talks, unnecessary arguments, stupid jokes,
-laughing until our stomachs hurt, and those
-conversations that start with something completely
-random and somehow go on forever. 😭😂
+Mana bond lo unna aa little things.
+The random talks, unnecessary arguments, stupid jokes,
+laughing until our stomachs hurt, and those conversations
+that start with something completely random and somehow
+go on forever. 😭😂
 </p>
 
 <p>
-Even the quiet moments, the awkward phases,
-the gaps… somehow they all became part of
-our story. And maybe that's what makes it ours. 🥹❤️
+Even the quiet moments, the awkward phases, the gaps...
+somehow they all became part of our story.
+And maybe that's what makes it ours. 🥹❤️
 </p>
 
 <p>
-Sometimes I think about how different everything
-would have been if we had never met… and honestly,
+Sometimes I think about how different everything would
+have been if we had never met... and honestly,
 I don't even want to imagine that. 🫂
 </p>
 
 <p>
-You have given me so many memories that I'll
-randomly remember years later and smile like
-an idiot. Especially those random letters 😭💗
+You have given me so many memories that I'll randomly
+remember years later and smile like an idiot.
+Especially those random letters 😭💗
 </p>
 
 <p>
 And maybe I don't always show it properly,
-No matter how many people come into my life,
-you'll always have your own little corner in
-my heart. 🫶🏻♾️
+but no matter how many people come into my life,
+you'll always have your own little corner in my heart. 🫶🏻♾️
 </p>
 
 <p>
@@ -949,7 +1119,7 @@ And I'm even more glad that, after everything,
 we're talking again. 🥹❤️
 </p>
 
-<p class="center">
+<p class="signature">
 Happiest Birthday, Tanvithaaa 🎂🎀💗
 </p>
 
@@ -960,12 +1130,12 @@ and all the little things you've secretly wished for. ✨
 </p>
 
 <p>
-And hopefully someday, we'll sit together, look
-back at everything, laugh about all the stupid
-things we did, and say…
+And hopefully someday, we'll sit together,
+look back at everything, laugh about all the stupid
+things we did, and say...
 </p>
 
-<p class="center">
+<p class="signature">
 “Arey, manam intha over ga enduku unde vallam?” 😭😂
 </p>
 
@@ -974,11 +1144,11 @@ Until then, keep being the same crazy, cute,
 annoying, beautiful you. 😂🫶🏻
 </p>
 
-<p class="center">
+<p>
 Love youuu so muchhh, Thanu. 🫂❤️
 </p>
 
-<p class="center">
+<p>
 And whatever happens, I'll always be somewhere
 in your corner, cheering for you. 🌷♾️
 </p>
@@ -986,390 +1156,534 @@ in your corner, cheering for you. 🌷♾️
 </div>
 
 <button onclick="go('final')">
-One last thing... 💗
+  One last thing... 🥹
 </button>
 
+</div>
 </div>
 </section>
 
 
-<!-- FINAL -->
-<section class="screen final" id="final">
-<div class="content">
+<!-- ================= FINAL ================= -->
 
-<h1 class="love">
-LOVE YOUUU 💗
-</h1>
+<section class="screen" id="final">
+<div class="container">
+<div class="card final-card">
 
-<p>
-And now... one last little surprise. 🥹
-</p>
-
-<div class="cats">
-<div class="kiss">💋</div>
-<div class="cat1">🐱</div>
-<div class="cat2">🐱</div>
+<div class="final-doodles">
+  ✨ 🎀 🌷 ✨ 🐾 💗 ✨
 </div>
 
-<p style="font-size:27px">
-mwahhh 💋💗
+<div class="cute-doodle">
+
+  <div class="doodle-star star1">✦</div>
+  <div class="doodle-star star2">✧</div>
+
+  <div class="doodle-heart heart1">♡</div>
+  <div class="doodle-heart heart2">♥</div>
+
+  <div class="cute-cat">
+    /\_/\\
+    <br>
+    ( o.o )
+    <br>
+    &gt; ^ &lt;
+  </div>
+
+  <div class="tiny-hearts">
+    💗 💕 💗
+  </div>
+
+</div>
+
+<h1>
+  LOVE YOUUU 💗
+</h1>
+
+<p class="final-birthday">
+  Happiest Birthday, Tanvithaaa 🎂🎀
+</p>
+
+<div class="final-two-lines">
+
+<p>
+  Maybe next time... or the birthdays after that,
+  I hope I get to be there in person beside you. 🥹🎂❤️
 </p>
 
 <p>
-Two silly little cats, just like us sometimes. 😂🫶🏻
+  Until then, this little virtual gift is my way
+  of saying — I wish I was there. 🫂✨
 </p>
 
-<p style="font-size:25px;margin-top:25px">
-Happy Birthday, Tanvithaaa! 🎂🎀❤️
+</div>
+
+<div class="final-doodles bottom-doodles">
+  🌷 ♡ ✨ ♡ 🌷
+</div>
+
+<div class="replay">
+
+<p>
+  Wanna see it all again? 👀💗
 </p>
 
-<p style="margin-top:20px">
-Always somewhere in your corner. 🌷♾️
-</p>
+<button onclick="replayWebsite()">
+  ↻ Replay our little story 💌
+</button>
 
+</div>
+
+<div class="footer-heart">
+  ♡ ♡ ♡
+</div>
+
+</div>
 </div>
 </section>
 
 
 <script>
 
-const bg=document.getElementById("bgMusic");
-const dedicated=document.getElementById("dedicatedSong");
-const fah=document.getElementById("fah");
+/* ================= AUDIO ================= */
 
-let attempts=0;
-let songFinished=false;
-let current=0;
+const bgMusic =
+  document.getElementById("bgMusic");
 
-const memories=
-document.querySelectorAll(".memory");
+const fahMusic =
+  document.getElementById("fahMusic");
+
+const dedicatedSong =
+  document.getElementById("dedicatedSong");
+
+const songStatus =
+  document.getElementById("songStatus");
+
+bgMusic.loop = true;
+bgMusic.volume = 0.22;
+
+fahMusic.volume = 1;
+dedicatedSong.volume = 1;
+
+
+/* ================= VARIABLES ================= */
+
+let passwordAttempts = 0;
+let dedicatedFinished = false;
+let memoryIndex = 0;
+
+const memories = [
+  "photo1.jpg",
+  "photo2.jpg",
+  "photo3.jpg",
+  "photo4.jpg",
+  "photo5.jpg",
+  "photo6.jpg",
+  "photo7.jpg",
+  "photo8.jpg",
+  "photo9.jpg",
+  "photo10.jpg",
+  "photo11.jpg",
+  "photo12.jpg"
+];
+
+
+/* ================= SCREEN ================= */
 
 function go(id){
 
-document.querySelectorAll(".screen")
-.forEach(x=>x.classList.remove("active"));
+  document
+    .querySelectorAll(".screen")
+    .forEach(screen=>{
+      screen.classList.remove("active");
+    });
 
-document.getElementById(id)
-.classList.add("active");
+  const target =
+    document.getElementById(id);
 
-window.scrollTo(0,0);
+  if(target){
+    target.classList.add("active");
+  }
 
-if(id==="song"){
-startDedicated();
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+
+
+  if(id === "comedy"){
+    startFahhh();
+  }
+
+  if(id === "song"){
+    startDedicatedSong();
+  }
+
+  if(id === "memories" ||
+     id === "message"){
+    resumeBackground();
+  }
 }
 
-}
+
+/* ================= OPEN GIFT ================= */
 
 function openGift(){
 
-bg.volume=.25;
+  /*
+    This click gives Edge permission
+    to start audio.
+  */
 
-bg.play().catch(()=>{});
+  bgMusic.volume = 0.22;
 
-go("password");
+  bgMusic.play().catch(()=>{
+    console.log("Audio blocked by browser.");
+  });
 
-}
-
-function checkPass(){
-
-const input=
-document.getElementById("pass");
-
-const error=
-document.getElementById("error");
-
-if(input.value==="04"){
-
-error.innerHTML=
-"🔓 Correct! ❤️<br><br>"+
-"04 ✨ — 4 years since our friendship started...";
-
-setTimeout(()=>{
-go("opening");
-},1800);
-
-}else{
-
-attempts++;
-
-if(attempts===1){
-
-error.innerHTML=
-"❌ Password incorrect!<br>"+
-"Try againnn 😭";
-
-}else if(attempts===2){
-
-error.innerHTML=
-"❌ Still wrong?! 😭<br>"+
-"You should know this! 👀<br>"+
-"Try again.";
-
-}else{
-
-error.innerHTML=
-"😭 Areyyy! Think properlyyy! 😂";
-
-}
-
-input.value="";
-
-}
-
-}
-
-document.getElementById("pass")
-.addEventListener("keydown",e=>{
-if(e.key==="Enter")checkPass();
-});
-
-
-function birthday(){
-
-go("birthday");
-
-fireworks();
-
+  go("password");
 }
 
 
-function fireworks(){
+/* ================= PASSWORD ================= */
 
-const emojis=["🎆","✨","💗","🎉","⭐"];
+function checkPassword(){
 
-for(let burst=0;burst<6;burst++){
+  const input =
+    document.getElementById("passwordInput");
 
-setTimeout(()=>{
+  const error =
+    document.getElementById("passwordError");
 
-for(let i=0;i<16;i++){
+  if(input.value === "04"){
 
-const s=document.createElement("div");
+    error.innerHTML =
+      "Unlocked... 🥹💗";
 
-s.innerHTML=
-emojis[Math.floor(Math.random()*emojis.length)];
+    setTimeout(()=>{
+      go("question");
+    },600);
 
-s.style.position="fixed";
-s.style.left=(10+Math.random()*80)+"vw";
-s.style.top=(15+Math.random()*55)+"vh";
-s.style.fontSize="30px";
-s.style.zIndex="999";
-s.style.pointerEvents="none";
+    return;
+  }
 
-const x=(Math.random()-.5)*300;
-const y=(Math.random()-.5)*300;
+  passwordAttempts++;
 
-s.animate([
-{
-transform:"translate(0,0) scale(.5)",
-opacity:1
-},
-{
-transform:`translate(${x}px,${y}px) scale(1.3)`,
-opacity:0
+  if(passwordAttempts === 1){
+
+    error.innerHTML =
+      "Password incorrect 😭 Try again...";
+
+  }else if(passwordAttempts === 2){
+
+    error.innerHTML =
+      "Again incorrect 😭😂 Try again...";
+
+  }else{
+
+    error.innerHTML =
+      "Think about ussss 👀💗";
+
+  }
+
+  input.value = "";
 }
-],{
-duration:1300,
-easing:"ease-out"
-});
 
-document.body.appendChild(s);
 
-setTimeout(()=>s.remove(),1400);
+/* ================= NO ================= */
 
-}
+function noWay(){
 
-},burst*450);
-
-}
+  alert(
+    "NO antey... I'll kill you 😭😂❤️"
+  );
 
 }
 
 
-function startDedicated(){
+/* ================= FADE AUDIO ================= */
 
-songFinished=false;
+function fadeBackground(target,duration){
 
-bg.pause();
+  const start = bgMusic.volume;
+  const difference = target-start;
+  const steps = 25;
+  let step = 0;
 
-dedicated.currentTime=0;
+  const timer =
+    setInterval(()=>{
 
-document.getElementById("songStatus")
-.innerHTML=
-"🎵 Please listen to the whole song...";
+      step++;
 
-dedicated.play().catch(()=>{
+      bgMusic.volume =
+        Math.max(
+          0,
+          Math.min(
+            1,
+            start +
+            difference*(step/steps)
+          )
+        );
 
-document.getElementById("songStatus")
-.innerHTML=
-"🎵 Tap Play once to start the song ❤️";
+      if(step >= steps){
+        clearInterval(timer);
+      }
 
-});
-
+    },duration/steps);
 }
 
-dedicated.addEventListener("ended",()=>{
 
-songFinished=true;
+/* ================= FAHHH ================= */
 
-document.getElementById("songStatus")
-.innerHTML=
-"💗 You listened till the end...";
+function startFahhh(){
 
-});
+  fadeBackground(.025,700);
 
+  fahMusic.pause();
+  fahMusic.currentTime = 0;
+
+  fahMusic.play().catch(()=>{
+    console.log("Fahhh waiting...");
+  });
+}
+
+
+fahMusic.addEventListener(
+  "ended",
+  ()=>{
+
+    if(bgMusic.paused){
+      bgMusic.play().catch(()=>{});
+    }
+
+    fadeBackground(.22,1200);
+  }
+);
+
+
+/* ================= DEDICATED SONG ================= */
+
+function startDedicatedSong(){
+
+  dedicatedFinished = false;
+
+  fadeBackground(0,600);
+
+  setTimeout(()=>{
+
+    bgMusic.pause();
+
+    dedicatedSong.pause();
+    dedicatedSong.currentTime = 0;
+
+    songStatus.innerHTML =
+      "🎶 Playing just for you... 🥹💗";
+
+    dedicatedSong.play().catch(()=>{
+
+      songStatus.innerHTML =
+        "🎵 Tap once to start the song 💗";
+
+    });
+
+  },650);
+}
+
+
+dedicatedSong.addEventListener(
+  "ended",
+  ()=>{
+
+    dedicatedFinished = true;
+
+    songStatus.innerHTML =
+      "You listened till the end... 🥹❤️";
+
+    bgMusic.volume = 0;
+
+    bgMusic.play().catch(()=>{});
+
+    fadeBackground(.22,1800);
+  }
+);
+
+
+/* ================= SONG NEXT ================= */
 
 function songNext(){
 
-if(!songFinished){
+  if(!dedicatedFinished){
 
-document.getElementById("warning")
-.classList.add("show");
+    document
+      .getElementById("warning")
+      .classList.add("show");
 
-return;
+    return;
+  }
 
+  go("memories");
 }
 
-go("hype");
 
-}
-
+/* ================= CLOSE WARNING ================= */
 
 function closeWarning(){
 
-document.getElementById("warning")
-.classList.remove("show");
+  document
+    .getElementById("warning")
+    .classList.remove("show");
 
-dedicated.play().catch(()=>{});
+  dedicatedSong.play().catch(()=>{});
+}
+
+
+/* ================= RESUME BG ================= */
+
+function resumeBackground(){
+
+  if(bgMusic.paused){
+
+    bgMusic.play().catch(()=>{});
+
+  }
+
+  fadeBackground(.22,1000);
+}
+
+
+/* ================= MEMORIES ================= */
+
+function showMemory(){
+
+  const image =
+    document.getElementById("memoryPhoto");
+
+  const number =
+    document.getElementById("memoryNumber");
+
+  image.src =
+    memories[memoryIndex];
+
+  number.innerHTML =
+    `${memoryIndex+1} / ${memories.length}`;
 
 }
 
 
-function playFah(){
+function nextMemory(){
 
-bg.volume=.05;
+  memoryIndex++;
 
-fah.currentTime=0;
+  if(memoryIndex >= memories.length){
+    memoryIndex = 0;
+  }
 
-fah.play().catch(()=>{});
-
-fah.onended=()=>{
-
-let v=setInterval(()=>{
-
-bg.volume=Math.min(.25,bg.volume+.02);
-
-if(bg.volume>=.25)
-clearInterval(v);
-
-},100);
-
-};
-
+  showMemory();
 }
 
 
-/* MEMORIES */
+function previousMemory(){
 
-function showMemory(i){
+  memoryIndex--;
 
-if(i<0)i=memories.length-1;
-if(i>=memories.length)i=0;
+  if(memoryIndex < 0){
+    memoryIndex = memories.length-1;
+  }
 
-memories.forEach(x=>
-x.classList.remove("active")
+  showMemory();
+}
+
+
+/* ================= SWIPE ================= */
+
+let touchStartX = 0;
+let touchEndX = 0;
+
+const memoryPhoto =
+  document.getElementById("memoryPhoto");
+
+memoryPhoto.addEventListener(
+  "touchstart",
+  event=>{
+    touchStartX =
+      event.changedTouches[0].screenX;
+  }
 );
 
-memories[i].classList.add("active");
+memoryPhoto.addEventListener(
+  "touchend",
+  event=>{
 
-current=i;
+    touchEndX =
+      event.changedTouches[0].screenX;
 
-document.getElementById("counter")
-.innerText=
-`${i+1} / ${memories.length}`;
+    if(touchStartX-touchEndX > 50){
+      nextMemory();
+    }
 
-}
+    if(touchEndX-touchStartX > 50){
+      previousMemory();
+    }
 
-function next(){
-showMemory(current+1);
-}
-
-function prev(){
-showMemory(current-1);
-}
-
-
-/* SWIPE */
-
-let startX=0;
-
-const slider=
-document.querySelector(".slider");
-
-slider.addEventListener("touchstart",e=>{
-startX=e.changedTouches[0].screenX;
-},{passive:true});
-
-slider.addEventListener("touchend",e=>{
-
-let endX=
-e.changedTouches[0].screenX;
-
-if(Math.abs(endX-startX)>50){
-
-if(endX<startX)next();
-else prev();
-
-}
-
-},{passive:true});
+  }
+);
 
 
-/* MUSIC */
+/* ================= REPLAY ================= */
 
-function toggleMusic(){
+function replayWebsite(){
 
-if(bg.paused){
+  bgMusic.pause();
+  fahMusic.pause();
+  dedicatedSong.pause();
 
-bg.volume=.25;
-bg.play();
+  bgMusic.currentTime = 0;
+  fahMusic.currentTime = 0;
+  dedicatedSong.currentTime = 0;
 
-}else{
+  bgMusic.volume = .22;
 
-bg.pause();
+  passwordAttempts = 0;
+  dedicatedFinished = false;
+  memoryIndex = 0;
 
-}
+  document.getElementById(
+    "passwordInput"
+  ).value = "";
+
+  document.getElementById(
+    "passwordError"
+  ).innerHTML = "";
+
+  showMemory();
+
+  go("intro");
 
 }
 
 
-/* FLOATING DOODLES */
+/* ================= ENTER PASSWORD ================= */
 
-setInterval(()=>{
+document
+  .getElementById("passwordInput")
+  .addEventListener(
+    "keydown",
+    event=>{
 
-const h=document.createElement("div");
+      if(event.key === "Enter"){
+        checkPassword();
+      }
 
-h.className="heart";
+    }
+  );
 
-h.innerHTML=
-["💗","💕","✨","🌷","🎀","🐾"]
-[Math.floor(Math.random()*6)];
 
-h.style.left=
-Math.random()*100+"vw";
+/* ================= START ================= */
 
-h.style.fontSize=
-(18+Math.random()*20)+"px";
-
-h.style.animationDuration=
-(5+Math.random()*5)+"s";
-
-document.body.appendChild(h);
-
-setTimeout(()=>h.remove(),10000);
-
-},800);
+showMemory();
 
 </script>
 
 </body>
 </html>
+
